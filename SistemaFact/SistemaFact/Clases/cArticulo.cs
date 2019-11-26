@@ -8,10 +8,10 @@ namespace SistemaFact.Clases
 {
     public class cArticulo
     {
-        public void Insertar(string Nombre,Double? Costo,Double? Precio,int? CodColor)
+        public void Insertar(string Nombre,Double? Costo,Double? Precio,int? CodColor,string Ruta)
         {
             string sql = "insert into Articulo(";
-            sql = sql + "Nombre,Costo,Precio,CodColor)";
+            sql = sql + "Nombre,Costo,Precio,CodColor,Ruta)";
             sql = sql + " Values(";
             sql = sql + "'" + Nombre + "'";
             if (Costo != null)
@@ -26,6 +26,7 @@ namespace SistemaFact.Clases
                 sql = sql + "," + CodColor.ToString();
             else
                 sql = sql + ",null";
+            sql = sql + "," + "'" + Ruta + "'"; 
             sql = sql + ")";
             cDb.Grabar(sql);
         }

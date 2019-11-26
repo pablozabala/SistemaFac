@@ -32,7 +32,12 @@ namespace SistemaFact
             if (file.ShowDialog() == DialogResult.OK)
             {
                 string ruta = file.FileName;
+                txtRuta.Text = ruta;
                 Imagen.Image = System.Drawing.Image.FromFile(ruta);
+            }
+            else
+            {
+                txtRuta.Text = "";
             }
         }
 
@@ -52,13 +57,14 @@ namespace SistemaFact
             Double? Costo = null;
             Double? Precio = null;
             int? CodColor = null;
+            string Ruta = txtRuta.Text;
             cArticulo art = new Clases.cArticulo();
 
             if (txtPrecioVenta.Text != "")
                 Precio = Convert.ToDouble(txtPrecioVenta.Text);
             if (cmbColor.SelectedIndex > 0)
                 CodColor = Convert.ToInt32(cmbColor.SelectedValue);
-            art.Insertar(Nombre, Costo, Precio, CodColor);
+            art.Insertar(Nombre, Costo, Precio, CodColor,Ruta);
             Mensaje("Datos grabados correctamente");
             Limpiar();
 
@@ -68,6 +74,12 @@ namespace SistemaFact
         {
             txtDescripcion.Text = "";
             txtPrecioVenta.Text = "";
+            txtRuta.Text = "";
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
