@@ -15,11 +15,11 @@ namespace SistemaFact.Clases
             sql = sql + " Values(";
             sql = sql + "'" + Nombre + "'";
             if (Costo != null)
-                sql = sql + "," + Costo.ToString().Replace(",".".");
+                sql = sql + "," + Costo.ToString().Replace(",",".");
             else
                 sql = sql + ",null";
             if (Precio != null)
-                sql = sql + "," + Precio.ToString().Replace(",".".");
+                sql = sql + "," + Precio.ToString().Replace(",",".");
             else
                 sql = sql + ",null";
             if (CodColor != null)

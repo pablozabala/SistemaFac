@@ -10,7 +10,9 @@ namespace SistemaFact.Clases
     {
         public static string GetConexion()
         {
-            string cadena = "Data Source=SECRETARIA-2\\SQLEXPRESS;Initial Catalog=ESCUELA;Integrated Security=True";
+            //home
+            //schol
+            string cadena = "Data Source=SECRETARIA-2\\SQLEXPRESS;Initial Catalog=FACTURACION;Integrated Security=True";
             return cadena;
         }
     }
