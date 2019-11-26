@@ -26,5 +26,15 @@ namespace SistemaFact
         {
             MessageBox.Show(msj, "Sistema");
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAbrirImagen_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

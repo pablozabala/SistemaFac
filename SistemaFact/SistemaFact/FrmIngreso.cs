@@ -16,5 +16,25 @@ namespace SistemaFact
         {
             InitializeComponent();
         }
+
+        private void FrmIngreso_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAbrirImagen_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog file = new OpenFileDialog();
+            if (file.ShowDialog() == DialogResult.OK)
+            {
+                string ruta = file.FileName;
+                Imagen.Image = System.Drawing.Image.FromFile(ruta);
+            }
+        }
+
+        private void txtCodigoBarra_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
