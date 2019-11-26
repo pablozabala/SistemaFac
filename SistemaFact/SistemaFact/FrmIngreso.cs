@@ -58,13 +58,17 @@ namespace SistemaFact
             Double? Precio = null;
             int? CodColor = null;
             string Ruta = txtRuta.Text;
+            int? CodTipoPrenda = null;
             cArticulo art = new Clases.cArticulo();
 
             if (txtPrecioVenta.Text != "")
                 Precio = Convert.ToDouble(txtPrecioVenta.Text);
             if (cmbColor.SelectedIndex > 0)
                 CodColor = Convert.ToInt32(cmbColor.SelectedValue);
-            art.Insertar(Nombre, Costo, Precio, CodColor,Ruta);
+            if (CmbTipoPrenda.SelectedIndex > 0)
+                CodTipoPrenda = Convert.ToInt32(CmbTipoPrenda.SelectedValue);
+
+            art.Insertar(Nombre, Costo, Precio, CodColor,Ruta, CodTipoPrenda);
             Mensaje("Datos grabados correctamente");
             Limpiar();
 
