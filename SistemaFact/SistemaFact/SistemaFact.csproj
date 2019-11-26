@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\cArticulo.cs" />
     <Compile Include="Clases\cConexion.cs" />
     <Compile Include="Clases\cDb.cs" />
     <Compile Include="Clases\cFunciones.cs" />
