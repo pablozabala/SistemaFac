@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtRuta = new System.Windows.Forms.TextBox();
             this.btnGrabar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.txtCodigoBarra = new System.Windows.Forms.TextBox();
@@ -47,13 +48,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtRuta = new System.Windows.Forms.TextBox();
+            this.btnNuevaTipoPrenda = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Imagen)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnNuevaTipoPrenda);
             this.groupBox1.Controls.Add(this.txtRuta);
             this.groupBox1.Controls.Add(this.btnGrabar);
             this.groupBox1.Controls.Add(this.label8);
@@ -76,10 +78,19 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(528, 465);
+            this.groupBox1.Size = new System.Drawing.Size(646, 465);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información del artículo";
+            // 
+            // txtRuta
+            // 
+            this.txtRuta.Location = new System.Drawing.Point(296, 215);
+            this.txtRuta.Name = "txtRuta";
+            this.txtRuta.Size = new System.Drawing.Size(132, 23);
+            this.txtRuta.TabIndex = 18;
+            this.txtRuta.Visible = false;
+            this.txtRuta.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnGrabar
             // 
@@ -237,20 +248,21 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tipo de prenda";
             // 
-            // txtRuta
+            // btnNuevaTipoPrenda
             // 
-            this.txtRuta.Location = new System.Drawing.Point(296, 215);
-            this.txtRuta.Name = "txtRuta";
-            this.txtRuta.Size = new System.Drawing.Size(132, 23);
-            this.txtRuta.TabIndex = 18;
-            this.txtRuta.Visible = false;
-            this.txtRuta.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.btnNuevaTipoPrenda.Location = new System.Drawing.Point(512, 33);
+            this.btnNuevaTipoPrenda.Name = "btnNuevaTipoPrenda";
+            this.btnNuevaTipoPrenda.Size = new System.Drawing.Size(53, 34);
+            this.btnNuevaTipoPrenda.TabIndex = 19;
+            this.btnNuevaTipoPrenda.Text = "button1";
+            this.btnNuevaTipoPrenda.UseVisualStyleBackColor = true;
+            this.btnNuevaTipoPrenda.Click += new System.EventHandler(this.btnNuevaTipoPrenda_Click);
             // 
             // FrmIngreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 489);
+            this.ClientSize = new System.Drawing.Size(670, 489);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmIngreso";
             this.Text = "FrmIngreso";
@@ -284,5 +296,6 @@
         private System.Windows.Forms.TextBox txtCodigoBarra;
         private System.Windows.Forms.Button btnGrabar;
         private System.Windows.Forms.TextBox txtRuta;
+        private System.Windows.Forms.Button btnNuevaTipoPrenda;
     }
 }

@@ -85,5 +85,32 @@ namespace SistemaFact
         {
 
         }
+
+        private void btnNuevaTipoPrenda_Click(object sender, EventArgs e)
+        {
+            Principal.CampoIdSecundario = "CodTipoPrenda";
+            Principal.CampoNombreSecundario = "Nombre";
+            Principal.NombreTablaSecundario = "TipoPrenda";
+            Principal.CampoIdSecundarioGenerado = "";
+            FrmAltaBasica form = new FrmAltaBasica();
+            form.FormClosing += new FormClosingEventHandler(form_FormClosing);
+            form.ShowDialog();
+        }
+
+        private void form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (Principal.CampoIdSecundarioGenerado != "")
+            {
+                Clases.cFunciones fun = new Clases.cFunciones();
+                switch (Principal.NombreTablaSecundario)
+                {
+                    case "TipoPrenda":  
+                        fun.LlenarCombo(CmbTipoPrenda, "TipoPrenda", "Nombre", "CodTipoPrenda");
+                        CmbTipoPrenda.SelectedValue = Principal.CampoIdSecundarioGenerado;
+                        break;
+                }
+            }
+
+        }
     }
 }
