@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnAgregarOrigen = new System.Windows.Forms.Button();
+            this.btnNuevaTipoPrenda = new System.Windows.Forms.Button();
             this.txtRuta = new System.Windows.Forms.TextBox();
             this.btnGrabar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -48,13 +50,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnNuevaTipoPrenda = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Imagen)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnAgregarOrigen);
             this.groupBox1.Controls.Add(this.btnNuevaTipoPrenda);
             this.groupBox1.Controls.Add(this.txtRuta);
             this.groupBox1.Controls.Add(this.btnGrabar);
@@ -82,6 +84,26 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información del artículo";
+            // 
+            // btnAgregarOrigen
+            // 
+            this.btnAgregarOrigen.Image = global::SistemaFact.Properties.Resources.add;
+            this.btnAgregarOrigen.Location = new System.Drawing.Point(512, 69);
+            this.btnAgregarOrigen.Name = "btnAgregarOrigen";
+            this.btnAgregarOrigen.Size = new System.Drawing.Size(26, 26);
+            this.btnAgregarOrigen.TabIndex = 20;
+            this.btnAgregarOrigen.UseVisualStyleBackColor = true;
+            this.btnAgregarOrigen.Click += new System.EventHandler(this.btnAgregarOrigen_Click);
+            // 
+            // btnNuevaTipoPrenda
+            // 
+            this.btnNuevaTipoPrenda.Image = global::SistemaFact.Properties.Resources.add;
+            this.btnNuevaTipoPrenda.Location = new System.Drawing.Point(512, 37);
+            this.btnNuevaTipoPrenda.Name = "btnNuevaTipoPrenda";
+            this.btnNuevaTipoPrenda.Size = new System.Drawing.Size(26, 26);
+            this.btnNuevaTipoPrenda.TabIndex = 19;
+            this.btnNuevaTipoPrenda.UseVisualStyleBackColor = true;
+            this.btnNuevaTipoPrenda.Click += new System.EventHandler(this.btnNuevaTipoPrenda_Click);
             // 
             // txtRuta
             // 
@@ -248,16 +270,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tipo de prenda";
             // 
-            // btnNuevaTipoPrenda
-            // 
-            this.btnNuevaTipoPrenda.Location = new System.Drawing.Point(512, 33);
-            this.btnNuevaTipoPrenda.Name = "btnNuevaTipoPrenda";
-            this.btnNuevaTipoPrenda.Size = new System.Drawing.Size(53, 34);
-            this.btnNuevaTipoPrenda.TabIndex = 19;
-            this.btnNuevaTipoPrenda.Text = "button1";
-            this.btnNuevaTipoPrenda.UseVisualStyleBackColor = true;
-            this.btnNuevaTipoPrenda.Click += new System.EventHandler(this.btnNuevaTipoPrenda_Click);
-            // 
             // FrmIngreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -265,7 +277,6 @@
             this.ClientSize = new System.Drawing.Size(670, 489);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmIngreso";
-            this.Text = "FrmIngreso";
             this.Load += new System.EventHandler(this.FrmIngreso_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -297,5 +308,6 @@
         private System.Windows.Forms.Button btnGrabar;
         private System.Windows.Forms.TextBox txtRuta;
         private System.Windows.Forms.Button btnNuevaTipoPrenda;
+        private System.Windows.Forms.Button btnAgregarOrigen;
     }
 }

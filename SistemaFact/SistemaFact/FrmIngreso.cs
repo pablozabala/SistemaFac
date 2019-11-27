@@ -108,9 +108,24 @@ namespace SistemaFact
                         fun.LlenarCombo(CmbTipoPrenda, "TipoPrenda", "Nombre", "CodTipoPrenda");
                         CmbTipoPrenda.SelectedValue = Principal.CampoIdSecundarioGenerado;
                         break;
+                    case "Origen":  
+                        fun.LlenarCombo(cmbOrigen, "Origen", "Nombre", "CodOrigen");
+                        cmbOrigen.SelectedValue = Principal.CampoIdSecundarioGenerado;
+                        break;
                 }
             }
 
+        }
+
+        private void btnAgregarOrigen_Click(object sender, EventArgs e)
+        {
+            Principal.CampoIdSecundario = "CodOrigen";
+            Principal.CampoNombreSecundario = "Nombre";
+            Principal.NombreTablaSecundario = "Origen";
+            Principal.CampoIdSecundarioGenerado = "";
+            FrmAltaBasica form = new FrmAltaBasica();
+            form.FormClosing += new FormClosingEventHandler(form_FormClosing);
+            form.ShowDialog();
         }
     }
 }
