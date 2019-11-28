@@ -127,5 +127,23 @@ namespace SistemaFact
             form.FormClosing += new FormClosingEventHandler(form_FormClosing);
             form.ShowDialog();
         }
+
+        private void btnGenerarCodigoBarra_Click(object sender, EventArgs e)
+        {
+            int c = 0;
+            Random r = new Random();
+            int nro = 0;
+            string codigo = "";
+            while (c<10)
+            {
+                nro = r.Next(0, 10);
+                if (c == 0)
+                    codigo = nro.ToString();
+                else
+                    codigo = codigo + nro.ToString();
+                c++;
+            }
+            txtCodigoBarra.Text = codigo;
+        }
     }
 }

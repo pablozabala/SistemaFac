@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnGenerarCodigoBarra = new System.Windows.Forms.Button();
             this.btnAgregarOrigen = new System.Windows.Forms.Button();
             this.btnNuevaTipoPrenda = new System.Windows.Forms.Button();
             this.txtRuta = new System.Windows.Forms.TextBox();
@@ -50,12 +51,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.ImagenCodigo = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Imagen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagenCodigo)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.ImagenCodigo);
+            this.groupBox1.Controls.Add(this.btnGenerarCodigoBarra);
             this.groupBox1.Controls.Add(this.btnAgregarOrigen);
             this.groupBox1.Controls.Add(this.btnNuevaTipoPrenda);
             this.groupBox1.Controls.Add(this.txtRuta);
@@ -85,6 +90,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información del artículo";
             // 
+            // btnGenerarCodigoBarra
+            // 
+            this.btnGenerarCodigoBarra.Image = global::SistemaFact.Properties.Resources.CodigoBarra;
+            this.btnGenerarCodigoBarra.Location = new System.Drawing.Point(296, 216);
+            this.btnGenerarCodigoBarra.Name = "btnGenerarCodigoBarra";
+            this.btnGenerarCodigoBarra.Size = new System.Drawing.Size(26, 26);
+            this.btnGenerarCodigoBarra.TabIndex = 21;
+            this.btnGenerarCodigoBarra.UseVisualStyleBackColor = true;
+            this.btnGenerarCodigoBarra.Click += new System.EventHandler(this.btnGenerarCodigoBarra_Click);
+            // 
             // btnAgregarOrigen
             // 
             this.btnAgregarOrigen.Image = global::SistemaFact.Properties.Resources.add;
@@ -107,7 +122,7 @@
             // 
             // txtRuta
             // 
-            this.txtRuta.Location = new System.Drawing.Point(296, 215);
+            this.txtRuta.Location = new System.Drawing.Point(296, 189);
             this.txtRuta.Name = "txtRuta";
             this.txtRuta.Size = new System.Drawing.Size(132, 23);
             this.txtRuta.TabIndex = 18;
@@ -135,7 +150,7 @@
             // 
             // txtCodigoBarra
             // 
-            this.txtCodigoBarra.Location = new System.Drawing.Point(158, 218);
+            this.txtCodigoBarra.Location = new System.Drawing.Point(328, 216);
             this.txtCodigoBarra.Name = "txtCodigoBarra";
             this.txtCodigoBarra.Size = new System.Drawing.Size(132, 23);
             this.txtCodigoBarra.TabIndex = 15;
@@ -270,6 +285,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tipo de prenda";
             // 
+            // ImagenCodigo
+            // 
+            this.ImagenCodigo.Location = new System.Drawing.Point(158, 218);
+            this.ImagenCodigo.Name = "ImagenCodigo";
+            this.ImagenCodigo.Size = new System.Drawing.Size(132, 50);
+            this.ImagenCodigo.TabIndex = 22;
+            this.ImagenCodigo.TabStop = false;
+            // 
             // FrmIngreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -281,6 +304,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Imagen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagenCodigo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -309,5 +333,7 @@
         private System.Windows.Forms.TextBox txtRuta;
         private System.Windows.Forms.Button btnNuevaTipoPrenda;
         private System.Windows.Forms.Button btnAgregarOrigen;
+        private System.Windows.Forms.Button btnGenerarCodigoBarra;
+        private System.Windows.Forms.PictureBox ImagenCodigo;
     }
 }
