@@ -17,7 +17,8 @@ namespace SistemaFact
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
            // Application.Run(new FrmIngreso());
-            Application.Run(new Form1());
+            Application.Run(new FrmVerReporte ());
+           // Application.Run(new Form1());
         }
     }
 }
