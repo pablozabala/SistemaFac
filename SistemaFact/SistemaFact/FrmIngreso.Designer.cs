@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ImagenCodigo = new System.Windows.Forms.PictureBox();
             this.btnGenerarCodigoBarra = new System.Windows.Forms.Button();
             this.btnAgregarOrigen = new System.Windows.Forms.Button();
             this.btnNuevaTipoPrenda = new System.Windows.Forms.Button();
@@ -51,10 +52,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.ImagenCodigo = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Imagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImagenCodigo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Imagen)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -90,10 +90,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información del artículo";
             // 
+            // ImagenCodigo
+            // 
+            this.ImagenCodigo.Location = new System.Drawing.Point(158, 218);
+            this.ImagenCodigo.Name = "ImagenCodigo";
+            this.ImagenCodigo.Size = new System.Drawing.Size(240, 50);
+            this.ImagenCodigo.TabIndex = 22;
+            this.ImagenCodigo.TabStop = false;
+            // 
             // btnGenerarCodigoBarra
             // 
             this.btnGenerarCodigoBarra.Image = global::SistemaFact.Properties.Resources.CodigoBarra;
-            this.btnGenerarCodigoBarra.Location = new System.Drawing.Point(296, 216);
+            this.btnGenerarCodigoBarra.Location = new System.Drawing.Point(398, 218);
             this.btnGenerarCodigoBarra.Name = "btnGenerarCodigoBarra";
             this.btnGenerarCodigoBarra.Size = new System.Drawing.Size(26, 26);
             this.btnGenerarCodigoBarra.TabIndex = 21;
@@ -150,7 +158,7 @@
             // 
             // txtCodigoBarra
             // 
-            this.txtCodigoBarra.Location = new System.Drawing.Point(328, 216);
+            this.txtCodigoBarra.Location = new System.Drawing.Point(430, 218);
             this.txtCodigoBarra.Name = "txtCodigoBarra";
             this.txtCodigoBarra.Size = new System.Drawing.Size(132, 23);
             this.txtCodigoBarra.TabIndex = 15;
@@ -285,14 +293,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tipo de prenda";
             // 
-            // ImagenCodigo
-            // 
-            this.ImagenCodigo.Location = new System.Drawing.Point(158, 218);
-            this.ImagenCodigo.Name = "ImagenCodigo";
-            this.ImagenCodigo.Size = new System.Drawing.Size(132, 50);
-            this.ImagenCodigo.TabIndex = 22;
-            this.ImagenCodigo.TabStop = false;
-            // 
             // FrmIngreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -303,8 +303,8 @@
             this.Load += new System.EventHandler(this.FrmIngreso_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Imagen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImagenCodigo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Imagen)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace SistemaFact
 {
-    public partial class FrmVerReporte : Form
+    public partial class FrmVerReporteBarra : Form
     {
-        public FrmVerReporte()
+        public FrmVerReporteBarra()
         {
             InitializeComponent();
         }
 
-        private void FrmVerReporte_Load(object sender, EventArgs e)
+        private void FrmVerReporteBarra_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'DataSet1.CodigoBarra' table. You can move, or remove it, as needed.
-            this.CodigoBarraTableAdapter.Fill(this.DataSet1.CodigoBarra);
+            // TODO: This line of code loads data into the 'DsReporte.CodigoBarra' table. You can move, or remove it, as needed.
+            this.CodigoBarraTableAdapter.Fill(this.DsReporte.CodigoBarra);
 
             this.reportViewer1.RefreshReport();
         }

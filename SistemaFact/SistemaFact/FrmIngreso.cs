@@ -59,16 +59,20 @@ namespace SistemaFact
             int? CodColor = null;
             string Ruta = txtRuta.Text;
             int? CodTipoPrenda = null;
+            string CodigoBarra = null;
             cArticulo art = new Clases.cArticulo();
-
+            cCodigoBarra objCodBarra = new cCodigoBarra();
             if (txtPrecioVenta.Text != "")
                 Precio = Convert.ToDouble(txtPrecioVenta.Text);
             if (cmbColor.SelectedIndex > 0)
                 CodColor = Convert.ToInt32(cmbColor.SelectedValue);
             if (CmbTipoPrenda.SelectedIndex > 0)
                 CodTipoPrenda = Convert.ToInt32(CmbTipoPrenda.SelectedValue);
-
-            art.Insertar(Nombre, Costo, Precio, CodColor,Ruta, CodTipoPrenda);
+           
+            CodigoBarra = txtCodigoBarra.Text;
+            art.Insertar(Nombre, Costo, Precio, CodColor,Ruta, CodTipoPrenda,CodigoBarra);
+            if (txtCodigoBarra.Text != "")
+                objCodBarra.Insertar(ImagenCodigo, 10,1 );
             Mensaje("Datos grabados correctamente");
             Limpiar();
 
@@ -142,8 +146,11 @@ namespace SistemaFact
                 else
                     codigo = codigo + nro.ToString();
                 c++;
-            }
+            }  
             txtCodigoBarra.Text = codigo;
+            BarcodeLib.Barcode CodBar = new BarcodeLib.Barcode();
+            //panel1.BackgroundImage = codigo.Encode(BarcodeLib.TYPE.CODE128, "12345678988877744521", Color.Black, Color.White, 300, 300);
+            ImagenCodigo.Image = CodBar.Encode(BarcodeLib.TYPE.CODE128, codigo , Color.Black, Color.White, 300, 300);
         }
     }
 }

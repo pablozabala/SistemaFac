@@ -1,6 +1,6 @@
 ﻿namespace SistemaFact
 {
-    partial class FrmVerReporte
+    partial class FrmVerReporteBarra
     {
         /// <summary>
         /// Required designer variable.
@@ -31,10 +31,10 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.DataSet1 = new SistemaFact.DataSet1();
+            this.DsReporte = new SistemaFact.DsReporte();
             this.CodigoBarraBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.CodigoBarraTableAdapter = new SistemaFact.DataSet1TableAdapters.CodigoBarraTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).BeginInit();
+            this.CodigoBarraTableAdapter = new SistemaFact.DsReporteTableAdapters.CodigoBarraTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.DsReporte)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CodigoBarraBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,36 +43,36 @@
             reportDataSource1.Name = "DataSet1";
             reportDataSource1.Value = this.CodigoBarraBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "SistemaFact.Reporte.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "SistemaFact.ReportBarra.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(12, 12);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(600, 429);
+            this.reportViewer1.Size = new System.Drawing.Size(855, 474);
             this.reportViewer1.TabIndex = 0;
             // 
-            // DataSet1
+            // DsReporte
             // 
-            this.DataSet1.DataSetName = "DataSet1";
-            this.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.DsReporte.DataSetName = "DsReporte";
+            this.DsReporte.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // CodigoBarraBindingSource
             // 
             this.CodigoBarraBindingSource.DataMember = "CodigoBarra";
-            this.CodigoBarraBindingSource.DataSource = this.DataSet1;
+            this.CodigoBarraBindingSource.DataSource = this.DsReporte;
             // 
             // CodigoBarraTableAdapter
             // 
             this.CodigoBarraTableAdapter.ClearBeforeFill = true;
             // 
-            // FrmVerReporte
+            // FrmVerReporteBarra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 522);
+            this.ClientSize = new System.Drawing.Size(879, 498);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "FrmVerReporte";
-            this.Text = "FrmVerReporte";
-            this.Load += new System.EventHandler(this.FrmVerReporte_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).EndInit();
+            this.Name = "FrmVerReporteBarra";
+            this.Text = "FrmVerReporteBarra";
+            this.Load += new System.EventHandler(this.FrmVerReporteBarra_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DsReporte)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CodigoBarraBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -82,7 +82,7 @@
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource CodigoBarraBindingSource;
-        private DataSet1 DataSet1;
-        private DataSet1TableAdapters.CodigoBarraTableAdapter CodigoBarraTableAdapter;
+        private DsReporte DsReporte;
+        private DsReporteTableAdapters.CodigoBarraTableAdapter CodigoBarraTableAdapter;
     }
 }

@@ -16,48 +16,51 @@ namespace SistemaFact.Clases
             SqlCommand cmd = new SqlCommand();
             string sql = "Insert into CodigoBarra(Foto,Foto2,Foto3,Foto4,Foto5,Foto6)";
             sql = sql + "values(@Foto,@Foto2,@Foto3,@Foto4,@Foto5,@Foto6)";
-            cmd.CommandText = sql;
+            
             con.Open();
             for (int i=1;i< Fila + 1;i++)
             {
                 if (i==Fila)
                 {
-                    cmd.Parameters["@Foto"].Value = null;
-                    cmd.Parameters["@Foto2"].Value = null;
-                    cmd.Parameters["@Foto3"].Value = null;
-                    cmd.Parameters["@Foto4"].Value = null;
-                    cmd.Parameters["@Foto5"].Value = null;
-                    cmd.Parameters["@Foto6"].Value = null;
+                    cmd.Parameters.Add("@Foto", System.Data.SqlDbType.Image);
                     System.IO.MemoryStream ms = new System.IO.MemoryStream();
                     Cuadro.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                    switch(Columna)
+                    cmd.Parameters["@Foto"].Value = ms.GetBuffer();
+                    switch (Columna)
                     {
                         case 1:
-                            cmd.Parameters["@Foto"].Value = ms.GetBuffer();
+                            sql = "Insert into CodigoBarra(Foto)";
+                            sql = sql + " values(@Foto)";
                             break;
                         case 2:
-                            cmd.Parameters["@Foto2"].Value = ms.GetBuffer();
+                            sql = "Insert into CodigoBarra(Foto2)";
+                            sql = sql + " values(@Foto)";
                             break;
                         case 3:
-                            cmd.Parameters["@Foto3"].Value = ms.GetBuffer();
+                            sql = "Insert into CodigoBarra(Foto3)";
+                            sql = sql + " values(@Foto)";
                             break;
                         case 4:
-                            cmd.Parameters["@Foto4"].Value = ms.GetBuffer();
+                            sql = "Insert into CodigoBarra(Foto4)";
+                            sql = sql + " values(@Foto)";
                             break;
                         case 5:
-                            cmd.Parameters["@Foto5"].Value = ms.GetBuffer();
+                            sql = "Insert into CodigoBarra(Foto5)";
+                            sql = sql + " values(@Foto)";
                             break;
                         case 6:
-                            cmd.Parameters["@Foto6"].Value = ms.GetBuffer();
+                            sql = "Insert into CodigoBarra(Foto6)";
+                            sql = sql + " values(@Foto)";
                             break;                            
                     }
+                    cmd.CommandText = sql;
                     cmd.Connection = con;
                     cmd.ExecuteNonQuery();
                 }
                 else
                 {
                     string sql2 = "Insert into CodigoBarra(Foto,Foto2,Foto3,Foto4,Foto5,Foto6)";
-                    sql2 = sql2 + "Values(null,null,null,nul,null,null)";
+                    sql2 = sql2 + " Values(null,null,null,null,null,null)";
                     SqlCommand cmd2 = new SqlCommand();
                     cmd2.CommandText = sql2;
                     cmd2.Connection = con;

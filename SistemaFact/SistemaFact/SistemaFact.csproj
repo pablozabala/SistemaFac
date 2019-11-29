@@ -68,6 +68,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DsReporte.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsReporte.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,11 +97,11 @@
     <Compile Include="FrmIngreso.Designer.cs">
       <DependentUpon>FrmIngreso.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmVerReporte.cs">
+    <Compile Include="FrmVerReporteBarra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmVerReporte.Designer.cs">
-      <DependentUpon>FrmVerReporte.cs</DependentUpon>
+    <Compile Include="FrmVerReporteBarra.Designer.cs">
+      <DependentUpon>FrmVerReporteBarra.cs</DependentUpon>
     </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
@@ -118,8 +123,8 @@
     <EmbeddedResource Include="FrmIngreso.resx">
       <DependentUpon>FrmIngreso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmVerReporte.resx">
-      <DependentUpon>FrmVerReporte.cs</DependentUpon>
+    <EmbeddedResource Include="FrmVerReporteBarra.resx">
+      <DependentUpon>FrmVerReporteBarra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
@@ -134,6 +139,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReportBarra.rdlc" />
     <EmbeddedResource Include="Reporte.rdlc" />
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
@@ -145,6 +151,17 @@
     </None>
     <None Include="DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DsReporte.xsc">
+      <DependentUpon>DsReporte.xsd</DependentUpon>
+    </None>
+    <None Include="DsReporte.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsReporte.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsReporte.xss">
+      <DependentUpon>DsReporte.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
