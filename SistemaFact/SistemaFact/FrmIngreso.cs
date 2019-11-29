@@ -72,7 +72,7 @@ namespace SistemaFact
             CodigoBarra = txtCodigoBarra.Text;
             art.Insertar(Nombre, Costo, Precio, CodColor,Ruta, CodTipoPrenda,CodigoBarra);
             if (txtCodigoBarra.Text != "")
-                objCodBarra.Insertar(ImagenCodigo, 10,1 );
+                objCodBarra.Insertar(ImagenCodigo, 1,1 );
             Mensaje("Datos grabados correctamente");
             Limpiar();
 
