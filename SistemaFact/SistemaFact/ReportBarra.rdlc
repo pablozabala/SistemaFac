@@ -9,7 +9,7 @@
               <Width>2.71167cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.71167cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.5cm</Width>
@@ -17,7 +17,7 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>0.78521cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -36,32 +36,17 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox4">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox4</rd:DefaultName>
+                    <Image Name="Image2">
+                      <Source>Database</Source>
+                      <Value>=Fields!Foto2.Value</Value>
+                      <MIMEType>image/bmp</MIMEType>
+                      <Sizing>Fit</Sizing>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                         </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                    </Textbox>
+                    </Image>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -113,8 +98,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Height>0.6cm</Height>
-        <Width>7.71167cm</Width>
+        <Height>0.78521cm</Height>
+        <Width>7.92334cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
