@@ -18,7 +18,8 @@ namespace SistemaFact
             Application.SetCompatibleTextRenderingDefault(false);
            // Application.Run(new FrmIngreso());
           //  Application.Run(new FrmVerReporteBarra());
-            Application.Run(new FrmIngreso ());
+          //  Application.Run(new FrmIngreso ());
+            Application.Run(new Principal ());
         }
     }
 }

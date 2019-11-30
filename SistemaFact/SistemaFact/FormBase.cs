@@ -27,6 +27,8 @@ namespace SistemaFact
             MessageBox.Show(msj, "Sistema");
         }
 
+
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 

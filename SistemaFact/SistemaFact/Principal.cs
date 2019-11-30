@@ -40,7 +40,7 @@ namespace SistemaFact
 
         private void ShowNewForm(object sender, EventArgs e)
         {
-            Form childForm = new Form();
+            FrmAbmArticulocs childForm = new FrmAbmArticulocs();
             childForm.MdiParent = this;
             childForm.Text = "Window " + childFormNumber++;
             childForm.Show();

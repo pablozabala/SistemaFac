@@ -475,7 +475,8 @@ namespace SistemaFact.Clases
                         {
                             ComboBox Combo = (ComboBox)g;
                             string[] vec = nombre.Split('_');
-                            Combo.SelectedIndex = 0;
+                            if(Combo.Items.Count >0)
+                                Combo.SelectedIndex = 0;
                         }
                     }
                 }
