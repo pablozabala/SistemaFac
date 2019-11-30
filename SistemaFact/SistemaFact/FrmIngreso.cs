@@ -34,6 +34,8 @@ namespace SistemaFact
                 string ruta = file.FileName;
                 txtRuta.Text = ruta;
                 Imagen.Image = System.Drawing.Image.FromFile(ruta);
+                string RUTAGRABAR = "e:\\ARCHIVO\\" + file.SafeFileName.ToString();
+                Imagen.Image.Save(RUTAGRABAR);
             }
             else
             {
@@ -75,6 +77,7 @@ namespace SistemaFact
                 objCodBarra.Insertar(ImagenCodigo, 1,2 );
             Mensaje("Datos grabados correctamente");
             Limpiar();
+            
 
         }
 
