@@ -87,12 +87,12 @@ namespace SistemaFact
 
         private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            toolStrip.Visible = toolBarToolStripMenuItem.Checked;
+            
         }
 
         private void StatusBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            statusStrip.Visible = statusBarToolStripMenuItem.Checked;
+            
         }
 
         private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)

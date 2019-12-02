@@ -11,7 +11,7 @@ namespace SistemaFact.Clases
     {
         public static DataTable GetDatatable(string sql)
         {
-            SqlConnection con = new SqlConnection(cConexion.GetConexion());
+            SqlConnection con = new SqlConnection(cConexion.GetConexion ());
             SqlCommand comando = new SqlCommand();
             comando.CommandText = sql;
             comando.Connection = con;

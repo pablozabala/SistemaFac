@@ -11,9 +11,9 @@ namespace SistemaFact.Clases
         public static string GetConexion()
         {
             //home DESKTOP-QKECIIE
-            string cadena = "Data Source=DESKTOP-QKECIIE;Initial Catalog=FACTURACION;Integrated Security=True";
+         //   string cadena = "Data Source=DESKTOP-QKECIIE;Initial Catalog=FACTURACION;Integrated Security=True";
             //schol
-         //   string cadena = "Data Source=SECRETARIA-2\\SQLEXPRESS;Initial Catalog=FACTURACION;Integrated Security=True";
+            string cadena = "Data Source=SECRETARIA-2\\SQLEXPRESS;Initial Catalog=FACTURACION;Integrated Security=True";
             return cadena;
         }
     }

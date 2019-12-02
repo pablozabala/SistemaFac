@@ -97,6 +97,12 @@
     <Compile Include="FrmAltaBasica.Designer.cs">
       <DependentUpon>FrmAltaBasica.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmBuscadorGenerico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuscadorGenerico.Designer.cs">
+      <DependentUpon>FrmBuscadorGenerico.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmIngreso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAltaBasica.resx">
       <DependentUpon>FrmAltaBasica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuscadorGenerico.resx">
+      <DependentUpon>FrmBuscadorGenerico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmIngreso.resx">
       <DependentUpon>FrmIngreso.cs</DependentUpon>

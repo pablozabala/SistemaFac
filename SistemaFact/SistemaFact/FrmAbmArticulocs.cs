@@ -71,7 +71,8 @@ namespace SistemaFact
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-
+            Botonera(2);
+            Grupo.Enabled = true;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -122,7 +123,14 @@ namespace SistemaFact
 
         private void btnAbrir_Click(object sender, EventArgs e)
         {
-
+            Principal.OpcionesdeBusqueda = "Nombre;ApCodigoBarra";
+            Principal.TablaPrincipal = "Articulo";
+            Principal.OpcionesColumnasGrilla = "CodArticulo;Nombre;Precio";
+            Principal.ColumnasVisibles = "0;1;1";
+            Principal.ColumnasAncho = "0;390;190";
+            FrmBuscadorGenerico form = new FrmBuscadorGenerico();
+            form.FormClosing += new FormClosingEventHandler(form_FormClosing);
+            form.ShowDialog();
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
@@ -166,6 +174,13 @@ namespace SistemaFact
                         cmb_CodColor.SelectedValue = Principal.CampoIdSecundarioGenerado;
                         break;
                 }
+            }
+            if (Principal.CodigoPrincipalAbm !=null)
+            {
+                Botonera(3);
+                txtCodigo.Text = Principal.CodigoPrincipalAbm.ToString();
+                cFunciones fun = new Clases.cFunciones();
+                fun.CargarControles(this, "Articulo","CodArticulo", txtCodigo.Text);
             }
 
         }
