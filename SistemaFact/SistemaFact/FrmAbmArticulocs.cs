@@ -118,7 +118,14 @@ namespace SistemaFact
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-
+            cFunciones fun = new Clases.cFunciones();
+            txtCodigo.Text = "";
+            txt_Nombre.Text = "";
+            Botonera(1);
+            Grupo.Enabled = false;
+            fun.LimpiarGenerico(this);
+            ImagenCodigo.Image = null;
+            Imagen.Image = null;
         }
 
         private void btnAbrir_Click(object sender, EventArgs e)

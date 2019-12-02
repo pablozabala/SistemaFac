@@ -109,5 +109,13 @@ namespace SistemaFact
             Botonera(2);
             Grupo.Enabled = true;
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            txtCodigo.Text = "";
+            txt_Nombre.Text = "";
+            Botonera(1);
+            Grupo.Enabled = false;
+        }
     }
 }
