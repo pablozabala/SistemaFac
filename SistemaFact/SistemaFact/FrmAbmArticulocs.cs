@@ -181,6 +181,11 @@ namespace SistemaFact
                 txtCodigo.Text = Principal.CodigoPrincipalAbm.ToString();
                 cFunciones fun = new Clases.cFunciones();
                 fun.CargarControles(this, "Articulo","CodArticulo", txtCodigo.Text);
+                if (txt_CodigoBarra.Text !="")
+                {
+                    BarcodeLib.Barcode CodBar = new BarcodeLib.Barcode();                    
+                    ImagenCodigo.Image = CodBar.Encode(BarcodeLib.TYPE.CODE128, txt_CodigoBarra.Text , Color.Black, Color.White, 300, 300);
+                }
             }
 
         }
