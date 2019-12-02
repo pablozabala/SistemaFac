@@ -33,7 +33,7 @@ namespace SistemaFact
         {
 
         }
-
+        
         private void btnAbrirImagen_Click(object sender, EventArgs e)
         {
             

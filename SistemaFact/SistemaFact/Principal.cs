@@ -48,13 +48,10 @@ namespace SistemaFact
 
         private void OpenFile(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            openFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
-            if (openFileDialog.ShowDialog(this) == DialogResult.OK)
-            {
-                string FileName = openFileDialog.FileName;
-            }
+            FrmAbmTipoPrenda childForm = new FrmAbmTipoPrenda();
+            childForm.MdiParent = this;
+            //childForm.Text = "Window " + childFormNumber++;
+            childForm.Show();
         }
 
         private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -126,6 +123,14 @@ namespace SistemaFact
         private void Principal_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void printSetupToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmAbmColores  childForm = new FrmAbmColores();
+            childForm.MdiParent = this;
+            //childForm.Text = "Window " + childFormNumber++;
+            childForm.Show();
         }
     }
 }
