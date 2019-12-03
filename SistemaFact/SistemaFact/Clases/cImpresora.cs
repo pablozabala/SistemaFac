@@ -22,7 +22,7 @@ namespace SistemaFact.Clases
         public DataTable GetCordenadas()
         {
             string sql = "select * from Impresora";
-
+            return cDb.GetDatatable(sql);
         }
 
     }
