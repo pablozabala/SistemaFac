@@ -24,7 +24,7 @@ namespace SistemaFact
 
         private void FrmConfigurarImpresora_Load(object sender, EventArgs e)
         {
-
+            GetImpresora();
         }
 
         private void Grabar()
@@ -81,6 +81,16 @@ namespace SistemaFact
                 txtFila.Text = trdo.Rows[0]["Fila"].ToString();
                 txtColumna.Text  = trdo.Rows[0]["Columna"].ToString();
             }
+        }
+
+        private void txtColumna_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGrabar_Click(object sender, EventArgs e)
+        {
+            Grabar();
         }
     }
 }
