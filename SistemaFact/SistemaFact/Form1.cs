@@ -45,15 +45,12 @@ namespace SistemaFact
         }
 
         /*
-         * CREATE TABLE [dbo].[CodigoBarra](
-	[Foto] [image]  NULL,
-	[Foto2] [image] NULL,
-	[Foto3] [image] NULL,
-	[Foto4] [image] NULL,
-	[Foto5] [image] NULL,
-	[Foto6] [image] NULL
-) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
-GO
+         * create table Impresora
+( 
+   Fila int,
+   Columna int
+   )
+    
 
          * 
          */
