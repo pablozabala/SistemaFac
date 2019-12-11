@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAbmColores));
             this.BarraBotones = new System.Windows.Forms.ToolStrip();
-            this.btnNuevo = new System.Windows.Forms.ToolStripButton();
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.btnAceptar = new System.Windows.Forms.ToolStripButton();
@@ -50,7 +49,6 @@
             // 
             this.BarraBotones.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.BarraBotones.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnNuevo,
             this.btnEditar,
             this.btnEliminar,
             this.btnAceptar,
@@ -63,17 +61,6 @@
             this.BarraBotones.Size = new System.Drawing.Size(372, 39);
             this.BarraBotones.TabIndex = 19;
             this.BarraBotones.Text = "toolStrip1";
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(36, 36);
-            this.btnNuevo.Text = "toolStripButton1";
-            this.btnNuevo.ToolTipText = "Nuevo";
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnEditar
             // 
