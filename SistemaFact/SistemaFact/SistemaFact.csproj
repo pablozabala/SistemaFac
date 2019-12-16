@@ -64,6 +64,7 @@
     <Compile Include="Clases\cDb.cs" />
     <Compile Include="Clases\cFunciones.cs" />
     <Compile Include="Clases\cImpresora.cs" />
+    <Compile Include="Clases\cRuta.cs" />
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

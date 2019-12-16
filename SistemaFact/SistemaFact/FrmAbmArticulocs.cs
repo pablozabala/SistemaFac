@@ -86,7 +86,12 @@ namespace SistemaFact
             if (txtCodigo.Text == "")
                 fun.GuardarNuevoGenerico(this, "Articulo");
             else
+            {
                 fun.ModificarGenerico(this, "Articulo", "CodArticulo", txtCodigo.Text);
+                if (txt_Ruta.Text != "")
+                    txt_Ruta.Text = txt_Ruta.Text.Replace("\\", "\\\\");
+            }
+                
             Mensaje("Datos grabados correctamente");
             if (txt_Ruta.Text !="")
             {
@@ -192,6 +197,12 @@ namespace SistemaFact
                 {
                     BarcodeLib.Barcode CodBar = new BarcodeLib.Barcode();                    
                     ImagenCodigo.Image = CodBar.Encode(BarcodeLib.TYPE.CODE128, txt_CodigoBarra.Text , Color.Black, Color.White, 300, 300);
+                    if (txt_Ruta.Text!="")
+                    {
+                        string ruta = txt_Ruta.Text;
+                        //ruta = ruta.Replace("\","\\");
+                        Imagen.Image = System.Drawing.Image.FromFile(ruta);
+                    }
                 }
             }
 
@@ -237,8 +248,9 @@ namespace SistemaFact
                 string ruta = ""; //file.FileName;
                 ruta = file.FileName;
                 Imagen.Image = System.Drawing.Image.FromFile(ruta);
-                string RutaGrabar = "e:\\ARCHIVO\\" + file.SafeFileName.ToString();
-                txt_Ruta.Text = RutaGrabar;
+                //string RutaGrabar = "e:\\ARCHIVO\\" + file.SafeFileName.ToString();
+                string RutaGrabar = cRuta.GetRuta () + "\\" + file.SafeFileName.ToString();
+                //txt_Ruta.Text = RutaGrabar.Replace("\\", "\\\\");
             }
             else
             {
