@@ -67,7 +67,10 @@ namespace SistemaFact
 
         private void ExitToolsStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            FrmConfigurarImpresora childForm = new FrmConfigurarImpresora();
+            childForm.MdiParent = this;
+            //childForm.Text = "Window " + childFormNumber++;
+            childForm.Show();
         }
 
         private void CutToolStripMenuItem_Click(object sender, EventArgs e)
