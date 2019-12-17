@@ -27,7 +27,8 @@ namespace SistemaFact
             cArticulo art = new Clases.cArticulo();
             DataTable trdo = art.GetArticulo(Nombre,CodigoBarra);
             Grilla.DataSource = trdo;
-            Grilla.Columns[0].Visible = false; 
+            Grilla.Columns[0].Visible = false;
+            Grilla.Columns[1].Width = 260; 
         }
 
         private void txtDescripcion_TextChanged(object sender, EventArgs e)
@@ -37,6 +38,16 @@ namespace SistemaFact
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Grilla_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Grupo_Enter(object sender, EventArgs e)
         {
 
         }

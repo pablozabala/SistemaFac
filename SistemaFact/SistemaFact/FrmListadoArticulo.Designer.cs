@@ -47,10 +47,11 @@
             this.Grupo.Controls.Add(this.Grilla);
             this.Grupo.Location = new System.Drawing.Point(12, 12);
             this.Grupo.Name = "Grupo";
-            this.Grupo.Size = new System.Drawing.Size(571, 402);
+            this.Grupo.Size = new System.Drawing.Size(737, 464);
             this.Grupo.TabIndex = 20;
             this.Grupo.TabStop = false;
             this.Grupo.Text = "Tipos de prenda";
+            this.Grupo.Enter += new System.EventHandler(this.Grupo_Enter);
             // 
             // textBox1
             // 
@@ -88,17 +89,18 @@
             // Grilla
             // 
             this.Grilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Grilla.Location = new System.Drawing.Point(23, 55);
+            this.Grilla.Location = new System.Drawing.Point(13, 45);
             this.Grilla.Name = "Grilla";
             this.Grilla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Grilla.Size = new System.Drawing.Size(527, 328);
+            this.Grilla.Size = new System.Drawing.Size(718, 413);
             this.Grilla.TabIndex = 0;
+            this.Grilla.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grilla_CellContentClick);
             // 
             // FrmListadoArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(595, 426);
+            this.ClientSize = new System.Drawing.Size(761, 488);
             this.Controls.Add(this.Grupo);
             this.Name = "FrmListadoArticulo";
             this.Text = "Listado de artículos";
