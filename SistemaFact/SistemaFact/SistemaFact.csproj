@@ -129,6 +129,12 @@
     <Compile Include="FrmIngreso.Designer.cs">
       <DependentUpon>FrmIngreso.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmListadoArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListadoArticulo.Designer.cs">
+      <DependentUpon>FrmListadoArticulo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmVerReporteBarra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmIngreso.resx">
       <DependentUpon>FrmIngreso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListadoArticulo.resx">
+      <DependentUpon>FrmListadoArticulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVerReporteBarra.resx">
       <DependentUpon>FrmVerReporteBarra.cs</DependentUpon>
