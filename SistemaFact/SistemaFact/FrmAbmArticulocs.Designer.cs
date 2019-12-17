@@ -42,7 +42,7 @@
             this.btnAbrirImagen = new System.Windows.Forms.Button();
             this.Imagen = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtStock = new System.Windows.Forms.TextBox();
+            this.txt_Stock = new System.Windows.Forms.TextBox();
             this.txt_Precio = new System.Windows.Forms.TextBox();
             this.txt_Nombre = new System.Windows.Forms.TextBox();
             this.cmb_CodOrigen = new System.Windows.Forms.ComboBox();
@@ -83,7 +83,7 @@
             this.Grupo.Controls.Add(this.btnAbrirImagen);
             this.Grupo.Controls.Add(this.Imagen);
             this.Grupo.Controls.Add(this.label7);
-            this.Grupo.Controls.Add(this.txtStock);
+            this.Grupo.Controls.Add(this.txt_Stock);
             this.Grupo.Controls.Add(this.txt_Precio);
             this.Grupo.Controls.Add(this.txt_Nombre);
             this.Grupo.Controls.Add(this.cmb_CodOrigen);
@@ -211,12 +211,12 @@
             this.label7.TabIndex = 12;
             this.label7.Text = "Imagen";
             // 
-            // txtStock
+            // txt_Stock
             // 
-            this.txtStock.Location = new System.Drawing.Point(158, 170);
-            this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(132, 23);
-            this.txtStock.TabIndex = 11;
+            this.txt_Stock.Location = new System.Drawing.Point(158, 170);
+            this.txt_Stock.Name = "txt_Stock";
+            this.txt_Stock.Size = new System.Drawing.Size(132, 23);
+            this.txt_Stock.TabIndex = 11;
             // 
             // txt_Precio
             // 
@@ -458,7 +458,7 @@
         private System.Windows.Forms.Button btnAbrirImagen;
         private System.Windows.Forms.PictureBox Imagen;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtStock;
+        private System.Windows.Forms.TextBox txt_Stock;
         private System.Windows.Forms.TextBox txt_Precio;
         private System.Windows.Forms.TextBox txt_Nombre;
         private System.Windows.Forms.ComboBox cmb_CodOrigen;

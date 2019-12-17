@@ -88,10 +88,10 @@
             // Grilla
             // 
             this.Grilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Grilla.Location = new System.Drawing.Point(23, 45);
+            this.Grilla.Location = new System.Drawing.Point(23, 55);
             this.Grilla.Name = "Grilla";
             this.Grilla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Grilla.Size = new System.Drawing.Size(527, 338);
+            this.Grilla.Size = new System.Drawing.Size(527, 328);
             this.Grilla.TabIndex = 0;
             // 
             // FrmListadoArticulo

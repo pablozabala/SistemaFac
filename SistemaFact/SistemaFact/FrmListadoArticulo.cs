@@ -35,5 +35,10 @@ namespace SistemaFact
             string nombre = txtDescripcion.Text;
             CargarGrilla(nombre,"");
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

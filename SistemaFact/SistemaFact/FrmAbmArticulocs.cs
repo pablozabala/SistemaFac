@@ -87,9 +87,10 @@ namespace SistemaFact
                 fun.GuardarNuevoGenerico(this, "Articulo");
             else
             {
+               // if (txt_Ruta.Text != "")
+                 //   txt_Ruta.Text = txt_Ruta.Text.Replace("\\", "\\\\");
                 fun.ModificarGenerico(this, "Articulo", "CodArticulo", txtCodigo.Text);
-                if (txt_Ruta.Text != "")
-                    txt_Ruta.Text = txt_Ruta.Text.Replace("\\", "\\\\");
+                
             }
                 
             Mensaje("Datos grabados correctamente");
@@ -250,7 +251,7 @@ namespace SistemaFact
                 Imagen.Image = System.Drawing.Image.FromFile(ruta);
                 //string RutaGrabar = "e:\\ARCHIVO\\" + file.SafeFileName.ToString();
                 string RutaGrabar = cRuta.GetRuta () + "\\" + file.SafeFileName.ToString();
-                //txt_Ruta.Text = RutaGrabar.Replace("\\", "\\\\");
+                txt_Ruta.Text = RutaGrabar;
             }
             else
             {
