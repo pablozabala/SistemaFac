@@ -44,7 +44,7 @@ namespace SistemaFact.Clases
         {
             string sql = "select a.CodArticulo,a.Nombre,";
             sql = sql + "(select tp.Nombre from TipoPrenda tp where tp.CodTipoPrenda = a.CodTipoPrenda) as TipoPrenda";
-            sql = sql + ", a.Costo,a.Precio";
+            sql = sql + ", a.Costo,a.Precio,a.Stock";
             sql = sql + " from articulo a";
             if (Nombre !="")
             {

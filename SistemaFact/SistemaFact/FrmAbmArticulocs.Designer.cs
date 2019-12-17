@@ -182,10 +182,11 @@
             this.txt_CodigoBarra.Name = "txt_CodigoBarra";
             this.txt_CodigoBarra.Size = new System.Drawing.Size(132, 23);
             this.txt_CodigoBarra.TabIndex = 15;
+            this.txt_CodigoBarra.Visible = false;
             // 
             // btnAbrirImagen
             // 
-            this.btnAbrirImagen.Location = new System.Drawing.Point(296, 273);
+            this.btnAbrirImagen.Location = new System.Drawing.Point(296, 245);
             this.btnAbrirImagen.Name = "btnAbrirImagen";
             this.btnAbrirImagen.Size = new System.Drawing.Size(102, 34);
             this.btnAbrirImagen.TabIndex = 14;
@@ -195,9 +196,9 @@
             // 
             // Imagen
             // 
-            this.Imagen.Location = new System.Drawing.Point(158, 273);
+            this.Imagen.Location = new System.Drawing.Point(158, 255);
             this.Imagen.Name = "Imagen";
-            this.Imagen.Size = new System.Drawing.Size(132, 117);
+            this.Imagen.Size = new System.Drawing.Size(132, 135);
             this.Imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Imagen.TabIndex = 13;
             this.Imagen.TabStop = false;
@@ -205,7 +206,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(36, 273);
+            this.label7.Location = new System.Drawing.Point(42, 245);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(54, 17);
             this.label7.TabIndex = 12;
