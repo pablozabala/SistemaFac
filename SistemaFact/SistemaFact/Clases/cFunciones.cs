@@ -414,9 +414,20 @@ namespace SistemaFact.Clases
                             TextBox CajaTexto = (TextBox)g;
                             string[] vec = nombre.Split('_');
                             if (ban == 0)
-                                sql = sql + vec[1].ToString() + "=" + "'" + CajaTexto.Text + "'";
+                            {
+                                if (CajaTexto.Text != "")
+                                    sql = sql + vec[1].ToString() + "=" + "'" + CajaTexto.Text + "'";
+                                else
+                                    sql = sql + vec[1].ToString() + "=null";
+                            }                                
                             else
-                                sql = sql + "," + vec[1].ToString() + "=" + "'" + CajaTexto.Text + "'";
+                            {
+                                if (CajaTexto.Text != "")
+                                    sql = sql + "," + vec[1].ToString() + "=" + "'" + CajaTexto.Text + "'";
+                                else
+                                    sql = sql + "," + vec[1].ToString() + "=null";
+                            }
+                                
                             ban = 1;
                         }
 

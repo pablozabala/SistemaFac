@@ -17,9 +17,9 @@ namespace SistemaFact
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             // Application.Run(new FrmIngreso());
-            //  Application.Run(new FrmVerReporteBarra());
-              Application.Run(new FrmConfigurarImpresora ());
-            //  Application.Run(new Principal ());
+           //   Application.Run(new FrmVerReporteBarra());
+           //   Application.Run(new FrmConfigurarImpresora ());
+              Application.Run(new Principal ());
         }
     }
 }

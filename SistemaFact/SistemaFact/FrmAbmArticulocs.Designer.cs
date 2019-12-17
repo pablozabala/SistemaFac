@@ -29,16 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAbmArticulocs));
-            this.BarraBotones = new System.Windows.Forms.ToolStrip();
-            this.btnNuevo = new System.Windows.Forms.ToolStripButton();
-            this.btnEditar = new System.Windows.Forms.ToolStripButton();
-            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
-            this.btnAceptar = new System.Windows.Forms.ToolStripButton();
-            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
-            this.btnAbrir = new System.Windows.Forms.ToolStripButton();
-            this.btnIGregarColor = new System.Windows.Forms.ToolStripButton();
-            this.btnSalir = new System.Windows.Forms.ToolStripButton();
             this.Grupo = new System.Windows.Forms.GroupBox();
+            this.btnAgregarColor = new System.Windows.Forms.Button();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.ImagenCodigo = new System.Windows.Forms.PictureBox();
             this.btnGenerarCodigoBarra = new System.Windows.Forms.Button();
@@ -50,7 +42,7 @@
             this.btnAbrirImagen = new System.Windows.Forms.Button();
             this.Imagen = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtStock = new System.Windows.Forms.TextBox();
+            this.txt_Stock = new System.Windows.Forms.TextBox();
             this.txt_Precio = new System.Windows.Forms.TextBox();
             this.txt_Nombre = new System.Windows.Forms.TextBox();
             this.cmb_CodOrigen = new System.Windows.Forms.ComboBox();
@@ -62,12 +54,265 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnAgregarColor = new System.Windows.Forms.Button();
-            this.BarraBotones.SuspendLayout();
+            this.BarraBotones = new System.Windows.Forms.ToolStrip();
+            this.btnNuevo = new System.Windows.Forms.ToolStripButton();
+            this.btnEditar = new System.Windows.Forms.ToolStripButton();
+            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
+            this.btnAceptar = new System.Windows.Forms.ToolStripButton();
+            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
+            this.btnAbrir = new System.Windows.Forms.ToolStripButton();
+            this.btnIGregarColor = new System.Windows.Forms.ToolStripButton();
+            this.btnSalir = new System.Windows.Forms.ToolStripButton();
             this.Grupo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImagenCodigo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Imagen)).BeginInit();
+            this.BarraBotones.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // Grupo
+            // 
+            this.Grupo.Controls.Add(this.btnAgregarColor);
+            this.Grupo.Controls.Add(this.txtCodigo);
+            this.Grupo.Controls.Add(this.ImagenCodigo);
+            this.Grupo.Controls.Add(this.btnGenerarCodigoBarra);
+            this.Grupo.Controls.Add(this.btnAgregarOrigen);
+            this.Grupo.Controls.Add(this.btnNuevaTipoPrenda);
+            this.Grupo.Controls.Add(this.txt_Ruta);
+            this.Grupo.Controls.Add(this.label8);
+            this.Grupo.Controls.Add(this.txt_CodigoBarra);
+            this.Grupo.Controls.Add(this.btnAbrirImagen);
+            this.Grupo.Controls.Add(this.Imagen);
+            this.Grupo.Controls.Add(this.label7);
+            this.Grupo.Controls.Add(this.txt_Stock);
+            this.Grupo.Controls.Add(this.txt_Precio);
+            this.Grupo.Controls.Add(this.txt_Nombre);
+            this.Grupo.Controls.Add(this.cmb_CodOrigen);
+            this.Grupo.Controls.Add(this.cmb_CodColor);
+            this.Grupo.Controls.Add(this.cmb_CodTipoPrenda);
+            this.Grupo.Controls.Add(this.label6);
+            this.Grupo.Controls.Add(this.label5);
+            this.Grupo.Controls.Add(this.label4);
+            this.Grupo.Controls.Add(this.label3);
+            this.Grupo.Controls.Add(this.label2);
+            this.Grupo.Controls.Add(this.label1);
+            this.Grupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Grupo.Location = new System.Drawing.Point(13, 55);
+            this.Grupo.Name = "Grupo";
+            this.Grupo.Size = new System.Drawing.Size(646, 465);
+            this.Grupo.TabIndex = 18;
+            this.Grupo.TabStop = false;
+            this.Grupo.Text = "Información del artículo";
+            // 
+            // btnAgregarColor
+            // 
+            this.btnAgregarColor.Image = global::SistemaFact.Properties.Resources.add;
+            this.btnAgregarColor.Location = new System.Drawing.Point(512, 52);
+            this.btnAgregarColor.Name = "btnAgregarColor";
+            this.btnAgregarColor.Size = new System.Drawing.Size(26, 26);
+            this.btnAgregarColor.TabIndex = 24;
+            this.btnAgregarColor.UseVisualStyleBackColor = true;
+            this.btnAgregarColor.Click += new System.EventHandler(this.btnAgregarColor_Click);
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(465, 141);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(41, 23);
+            this.txtCodigo.TabIndex = 23;
+            this.txtCodigo.Visible = false;
+            // 
+            // ImagenCodigo
+            // 
+            this.ImagenCodigo.Location = new System.Drawing.Point(158, 199);
+            this.ImagenCodigo.Name = "ImagenCodigo";
+            this.ImagenCodigo.Size = new System.Drawing.Size(240, 50);
+            this.ImagenCodigo.TabIndex = 22;
+            this.ImagenCodigo.TabStop = false;
+            // 
+            // btnGenerarCodigoBarra
+            // 
+            this.btnGenerarCodigoBarra.Image = global::SistemaFact.Properties.Resources.CodigoBarra;
+            this.btnGenerarCodigoBarra.Location = new System.Drawing.Point(402, 199);
+            this.btnGenerarCodigoBarra.Name = "btnGenerarCodigoBarra";
+            this.btnGenerarCodigoBarra.Size = new System.Drawing.Size(26, 26);
+            this.btnGenerarCodigoBarra.TabIndex = 21;
+            this.btnGenerarCodigoBarra.UseVisualStyleBackColor = true;
+            this.btnGenerarCodigoBarra.Click += new System.EventHandler(this.btnGenerarCodigoBarra_Click);
+            // 
+            // btnAgregarOrigen
+            // 
+            this.btnAgregarOrigen.Image = global::SistemaFact.Properties.Resources.add;
+            this.btnAgregarOrigen.Location = new System.Drawing.Point(512, 80);
+            this.btnAgregarOrigen.Name = "btnAgregarOrigen";
+            this.btnAgregarOrigen.Size = new System.Drawing.Size(26, 26);
+            this.btnAgregarOrigen.TabIndex = 20;
+            this.btnAgregarOrigen.UseVisualStyleBackColor = true;
+            this.btnAgregarOrigen.Click += new System.EventHandler(this.btnAgregarOrigen_Click);
+            // 
+            // btnNuevaTipoPrenda
+            // 
+            this.btnNuevaTipoPrenda.Image = global::SistemaFact.Properties.Resources.add;
+            this.btnNuevaTipoPrenda.Location = new System.Drawing.Point(512, 20);
+            this.btnNuevaTipoPrenda.Name = "btnNuevaTipoPrenda";
+            this.btnNuevaTipoPrenda.Size = new System.Drawing.Size(26, 26);
+            this.btnNuevaTipoPrenda.TabIndex = 19;
+            this.btnNuevaTipoPrenda.UseVisualStyleBackColor = true;
+            this.btnNuevaTipoPrenda.Click += new System.EventHandler(this.btnNuevaTipoPrenda_Click);
+            // 
+            // txt_Ruta
+            // 
+            this.txt_Ruta.Location = new System.Drawing.Point(296, 167);
+            this.txt_Ruta.Name = "txt_Ruta";
+            this.txt_Ruta.Size = new System.Drawing.Size(132, 23);
+            this.txt_Ruta.TabIndex = 18;
+            this.txt_Ruta.Visible = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(42, 199);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(91, 17);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Código Barra";
+            // 
+            // txt_CodigoBarra
+            // 
+            this.txt_CodigoBarra.Location = new System.Drawing.Point(434, 199);
+            this.txt_CodigoBarra.Name = "txt_CodigoBarra";
+            this.txt_CodigoBarra.Size = new System.Drawing.Size(132, 23);
+            this.txt_CodigoBarra.TabIndex = 15;
+            this.txt_CodigoBarra.Visible = false;
+            // 
+            // btnAbrirImagen
+            // 
+            this.btnAbrirImagen.Location = new System.Drawing.Point(296, 245);
+            this.btnAbrirImagen.Name = "btnAbrirImagen";
+            this.btnAbrirImagen.Size = new System.Drawing.Size(102, 34);
+            this.btnAbrirImagen.TabIndex = 14;
+            this.btnAbrirImagen.Text = "Seleccionar";
+            this.btnAbrirImagen.UseVisualStyleBackColor = true;
+            this.btnAbrirImagen.Click += new System.EventHandler(this.btnAbrirImagen_Click);
+            // 
+            // Imagen
+            // 
+            this.Imagen.Location = new System.Drawing.Point(158, 255);
+            this.Imagen.Name = "Imagen";
+            this.Imagen.Size = new System.Drawing.Size(132, 135);
+            this.Imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Imagen.TabIndex = 13;
+            this.Imagen.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(42, 245);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(54, 17);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Imagen";
+            // 
+            // txt_Stock
+            // 
+            this.txt_Stock.Location = new System.Drawing.Point(158, 170);
+            this.txt_Stock.Name = "txt_Stock";
+            this.txt_Stock.Size = new System.Drawing.Size(132, 23);
+            this.txt_Stock.TabIndex = 11;
+            // 
+            // txt_Precio
+            // 
+            this.txt_Precio.Location = new System.Drawing.Point(158, 141);
+            this.txt_Precio.Name = "txt_Precio";
+            this.txt_Precio.Size = new System.Drawing.Size(132, 23);
+            this.txt_Precio.TabIndex = 10;
+            // 
+            // txt_Nombre
+            // 
+            this.txt_Nombre.Location = new System.Drawing.Point(158, 112);
+            this.txt_Nombre.Name = "txt_Nombre";
+            this.txt_Nombre.Size = new System.Drawing.Size(348, 23);
+            this.txt_Nombre.TabIndex = 9;
+            // 
+            // cmb_CodOrigen
+            // 
+            this.cmb_CodOrigen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_CodOrigen.FormattingEnabled = true;
+            this.cmb_CodOrigen.Location = new System.Drawing.Point(158, 82);
+            this.cmb_CodOrigen.Name = "cmb_CodOrigen";
+            this.cmb_CodOrigen.Size = new System.Drawing.Size(348, 24);
+            this.cmb_CodOrigen.TabIndex = 8;
+            // 
+            // cmb_CodColor
+            // 
+            this.cmb_CodColor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_CodColor.FormattingEnabled = true;
+            this.cmb_CodColor.Location = new System.Drawing.Point(158, 52);
+            this.cmb_CodColor.Name = "cmb_CodColor";
+            this.cmb_CodColor.Size = new System.Drawing.Size(348, 24);
+            this.cmb_CodColor.TabIndex = 7;
+            // 
+            // cmb_CodTipoPrenda
+            // 
+            this.cmb_CodTipoPrenda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_CodTipoPrenda.FormattingEnabled = true;
+            this.cmb_CodTipoPrenda.Location = new System.Drawing.Point(158, 22);
+            this.cmb_CodTipoPrenda.Name = "cmb_CodTipoPrenda";
+            this.cmb_CodTipoPrenda.Size = new System.Drawing.Size(348, 24);
+            this.cmb_CodTipoPrenda.TabIndex = 6;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(42, 173);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(82, 17);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Stock Inicial";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(42, 141);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(109, 17);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Precio de Venta";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(42, 112);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(82, 17);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Descripción";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(42, 52);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(110, 17);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Color de prenda";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(42, 82);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(120, 17);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Origen de prenda";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(47, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Tipo de prenda";
             // 
             // BarraBotones
             // 
@@ -171,249 +416,6 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // Grupo
-            // 
-            this.Grupo.Controls.Add(this.btnAgregarColor);
-            this.Grupo.Controls.Add(this.txtCodigo);
-            this.Grupo.Controls.Add(this.ImagenCodigo);
-            this.Grupo.Controls.Add(this.btnGenerarCodigoBarra);
-            this.Grupo.Controls.Add(this.btnAgregarOrigen);
-            this.Grupo.Controls.Add(this.btnNuevaTipoPrenda);
-            this.Grupo.Controls.Add(this.txt_Ruta);
-            this.Grupo.Controls.Add(this.label8);
-            this.Grupo.Controls.Add(this.txt_CodigoBarra);
-            this.Grupo.Controls.Add(this.btnAbrirImagen);
-            this.Grupo.Controls.Add(this.Imagen);
-            this.Grupo.Controls.Add(this.label7);
-            this.Grupo.Controls.Add(this.txtStock);
-            this.Grupo.Controls.Add(this.txt_Precio);
-            this.Grupo.Controls.Add(this.txt_Nombre);
-            this.Grupo.Controls.Add(this.cmb_CodOrigen);
-            this.Grupo.Controls.Add(this.cmb_CodColor);
-            this.Grupo.Controls.Add(this.cmb_CodTipoPrenda);
-            this.Grupo.Controls.Add(this.label6);
-            this.Grupo.Controls.Add(this.label5);
-            this.Grupo.Controls.Add(this.label4);
-            this.Grupo.Controls.Add(this.label3);
-            this.Grupo.Controls.Add(this.label2);
-            this.Grupo.Controls.Add(this.label1);
-            this.Grupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Grupo.Location = new System.Drawing.Point(13, 55);
-            this.Grupo.Name = "Grupo";
-            this.Grupo.Size = new System.Drawing.Size(646, 465);
-            this.Grupo.TabIndex = 18;
-            this.Grupo.TabStop = false;
-            this.Grupo.Text = "Información del artículo";
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Location = new System.Drawing.Point(465, 141);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(41, 23);
-            this.txtCodigo.TabIndex = 23;
-            this.txtCodigo.Visible = false;
-            // 
-            // ImagenCodigo
-            // 
-            this.ImagenCodigo.Location = new System.Drawing.Point(158, 199);
-            this.ImagenCodigo.Name = "ImagenCodigo";
-            this.ImagenCodigo.Size = new System.Drawing.Size(240, 50);
-            this.ImagenCodigo.TabIndex = 22;
-            this.ImagenCodigo.TabStop = false;
-            // 
-            // btnGenerarCodigoBarra
-            // 
-            this.btnGenerarCodigoBarra.Image = global::SistemaFact.Properties.Resources.CodigoBarra;
-            this.btnGenerarCodigoBarra.Location = new System.Drawing.Point(402, 199);
-            this.btnGenerarCodigoBarra.Name = "btnGenerarCodigoBarra";
-            this.btnGenerarCodigoBarra.Size = new System.Drawing.Size(26, 26);
-            this.btnGenerarCodigoBarra.TabIndex = 21;
-            this.btnGenerarCodigoBarra.UseVisualStyleBackColor = true;
-            this.btnGenerarCodigoBarra.Click += new System.EventHandler(this.btnGenerarCodigoBarra_Click);
-            // 
-            // btnAgregarOrigen
-            // 
-            this.btnAgregarOrigen.Image = global::SistemaFact.Properties.Resources.add;
-            this.btnAgregarOrigen.Location = new System.Drawing.Point(512, 80);
-            this.btnAgregarOrigen.Name = "btnAgregarOrigen";
-            this.btnAgregarOrigen.Size = new System.Drawing.Size(26, 26);
-            this.btnAgregarOrigen.TabIndex = 20;
-            this.btnAgregarOrigen.UseVisualStyleBackColor = true;
-            this.btnAgregarOrigen.Click += new System.EventHandler(this.btnAgregarOrigen_Click);
-            // 
-            // btnNuevaTipoPrenda
-            // 
-            this.btnNuevaTipoPrenda.Image = global::SistemaFact.Properties.Resources.add;
-            this.btnNuevaTipoPrenda.Location = new System.Drawing.Point(512, 20);
-            this.btnNuevaTipoPrenda.Name = "btnNuevaTipoPrenda";
-            this.btnNuevaTipoPrenda.Size = new System.Drawing.Size(26, 26);
-            this.btnNuevaTipoPrenda.TabIndex = 19;
-            this.btnNuevaTipoPrenda.UseVisualStyleBackColor = true;
-            this.btnNuevaTipoPrenda.Click += new System.EventHandler(this.btnNuevaTipoPrenda_Click);
-            // 
-            // txt_Ruta
-            // 
-            this.txt_Ruta.Location = new System.Drawing.Point(296, 167);
-            this.txt_Ruta.Name = "txt_Ruta";
-            this.txt_Ruta.Size = new System.Drawing.Size(132, 23);
-            this.txt_Ruta.TabIndex = 18;
-            this.txt_Ruta.Visible = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(42, 199);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(91, 17);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Código Barra";
-            // 
-            // txt_CodigoBarra
-            // 
-            this.txt_CodigoBarra.Location = new System.Drawing.Point(434, 199);
-            this.txt_CodigoBarra.Name = "txt_CodigoBarra";
-            this.txt_CodigoBarra.Size = new System.Drawing.Size(132, 23);
-            this.txt_CodigoBarra.TabIndex = 15;
-            // 
-            // btnAbrirImagen
-            // 
-            this.btnAbrirImagen.Location = new System.Drawing.Point(296, 273);
-            this.btnAbrirImagen.Name = "btnAbrirImagen";
-            this.btnAbrirImagen.Size = new System.Drawing.Size(102, 34);
-            this.btnAbrirImagen.TabIndex = 14;
-            this.btnAbrirImagen.Text = "Seleccionar";
-            this.btnAbrirImagen.UseVisualStyleBackColor = true;
-            this.btnAbrirImagen.Click += new System.EventHandler(this.btnAbrirImagen_Click);
-            // 
-            // Imagen
-            // 
-            this.Imagen.Location = new System.Drawing.Point(158, 273);
-            this.Imagen.Name = "Imagen";
-            this.Imagen.Size = new System.Drawing.Size(132, 117);
-            this.Imagen.TabIndex = 13;
-            this.Imagen.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(36, 273);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 17);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Imagen";
-            // 
-            // txtStock
-            // 
-            this.txtStock.Location = new System.Drawing.Point(158, 170);
-            this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(132, 23);
-            this.txtStock.TabIndex = 11;
-            // 
-            // txt_Precio
-            // 
-            this.txt_Precio.Location = new System.Drawing.Point(158, 141);
-            this.txt_Precio.Name = "txt_Precio";
-            this.txt_Precio.Size = new System.Drawing.Size(132, 23);
-            this.txt_Precio.TabIndex = 10;
-            // 
-            // txt_Nombre
-            // 
-            this.txt_Nombre.Location = new System.Drawing.Point(158, 112);
-            this.txt_Nombre.Name = "txt_Nombre";
-            this.txt_Nombre.Size = new System.Drawing.Size(348, 23);
-            this.txt_Nombre.TabIndex = 9;
-            // 
-            // cmb_CodOrigen
-            // 
-            this.cmb_CodOrigen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_CodOrigen.FormattingEnabled = true;
-            this.cmb_CodOrigen.Location = new System.Drawing.Point(158, 82);
-            this.cmb_CodOrigen.Name = "cmb_CodOrigen";
-            this.cmb_CodOrigen.Size = new System.Drawing.Size(348, 24);
-            this.cmb_CodOrigen.TabIndex = 8;
-            // 
-            // cmb_CodColor
-            // 
-            this.cmb_CodColor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_CodColor.FormattingEnabled = true;
-            this.cmb_CodColor.Location = new System.Drawing.Point(158, 52);
-            this.cmb_CodColor.Name = "cmb_CodColor";
-            this.cmb_CodColor.Size = new System.Drawing.Size(348, 24);
-            this.cmb_CodColor.TabIndex = 7;
-            // 
-            // cmb_CodTipoPrenda
-            // 
-            this.cmb_CodTipoPrenda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_CodTipoPrenda.FormattingEnabled = true;
-            this.cmb_CodTipoPrenda.Location = new System.Drawing.Point(158, 22);
-            this.cmb_CodTipoPrenda.Name = "cmb_CodTipoPrenda";
-            this.cmb_CodTipoPrenda.Size = new System.Drawing.Size(348, 24);
-            this.cmb_CodTipoPrenda.TabIndex = 6;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(42, 173);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 17);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Stock Inicial";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(42, 141);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 17);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Precio de Venta";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(42, 112);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 17);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Descripción";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(42, 52);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 17);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Color de prenda";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(42, 82);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Origen de prenda";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tipo de prenda";
-            // 
-            // btnAgregarColor
-            // 
-            this.btnAgregarColor.Image = global::SistemaFact.Properties.Resources.add;
-            this.btnAgregarColor.Location = new System.Drawing.Point(512, 52);
-            this.btnAgregarColor.Name = "btnAgregarColor";
-            this.btnAgregarColor.Size = new System.Drawing.Size(26, 26);
-            this.btnAgregarColor.TabIndex = 24;
-            this.btnAgregarColor.UseVisualStyleBackColor = true;
-            this.btnAgregarColor.Click += new System.EventHandler(this.btnAgregarColor_Click);
-            // 
             // FrmAbmArticulocs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -424,12 +426,12 @@
             this.Name = "FrmAbmArticulocs";
             this.Text = "FrmAbmArticulocs";
             this.Load += new System.EventHandler(this.FrmAbmArticulocs_Load);
-            this.BarraBotones.ResumeLayout(false);
-            this.BarraBotones.PerformLayout();
             this.Grupo.ResumeLayout(false);
             this.Grupo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImagenCodigo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Imagen)).EndInit();
+            this.BarraBotones.ResumeLayout(false);
+            this.BarraBotones.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -457,7 +459,7 @@
         private System.Windows.Forms.Button btnAbrirImagen;
         private System.Windows.Forms.PictureBox Imagen;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtStock;
+        private System.Windows.Forms.TextBox txt_Stock;
         private System.Windows.Forms.TextBox txt_Precio;
         private System.Windows.Forms.TextBox txt_Nombre;
         private System.Windows.Forms.ComboBox cmb_CodOrigen;
