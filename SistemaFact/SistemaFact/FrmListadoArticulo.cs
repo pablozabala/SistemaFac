@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using SistemaFact.Clases;
 namespace SistemaFact
 {
     public partial class FrmListadoArticulo : FormBase
@@ -19,7 +19,21 @@ namespace SistemaFact
 
         private void FrmListadoArticulo_Load(object sender, EventArgs e)
         {
+            CargarGrilla("","");
+        }
 
+        private void CargarGrilla(string Nombre,string CodigoBarra)
+        {
+            cArticulo art = new Clases.cArticulo();
+            DataTable trdo = art.GetArticulo(Nombre,CodigoBarra);
+            Grilla.DataSource = trdo;
+            Grilla.Columns[0].Visible = false; 
+        }
+
+        private void txtDescripcion_TextChanged(object sender, EventArgs e)
+        {
+            string nombre = txtDescripcion.Text;
+            CargarGrilla(nombre,"");
         }
     }
 }

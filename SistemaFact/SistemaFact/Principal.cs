@@ -135,5 +135,12 @@ namespace SistemaFact
             //childForm.Text = "Window " + childFormNumber++;
             childForm.Show();
         }
+
+        private void openToolStripButton_Click(object sender, EventArgs e)
+        {
+            FrmListadoArticulo frm = new FrmListadoArticulo();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

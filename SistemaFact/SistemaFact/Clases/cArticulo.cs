@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Data;
 namespace SistemaFact.Clases
 {
     public class cArticulo
@@ -38,6 +38,23 @@ namespace SistemaFact.Clases
                 sql = sql + ",null";
             sql = sql + ")";
             cDb.Grabar(sql);
+        }
+
+        public DataTable GetArticulo(string Nombre,string CodigoBarra)
+        {
+            string sql = "select a.CodArticulo,a.Nombre,";
+            sql = sql + "(select tp.Nombre from TipoPrenda tp where tp.CodTipoPrenda = a.CodTipoPrenda) as TipoPrenda";
+            sql = sql + ", a.Costo,a.Precio";
+            sql = sql + " from articulo a";
+            if (Nombre !="")
+            {
+                sql = sql + " where a.Nombre like " + "'%" + Nombre + "%'";
+            }
+            if (CodigoBarra !="")
+            {
+                sql = sql + " where a.CodigoBarra =" + "'" + CodigoBarra +"'";
+            }
+            return cDb.GetDatatable(sql);
         }
     }
 }
