@@ -49,7 +49,7 @@
             this.Grupo.Controls.Add(this.Grilla);
             this.Grupo.Location = new System.Drawing.Point(12, 12);
             this.Grupo.Name = "Grupo";
-            this.Grupo.Size = new System.Drawing.Size(737, 464);
+            this.Grupo.Size = new System.Drawing.Size(838, 464);
             this.Grupo.TabIndex = 20;
             this.Grupo.TabStop = false;
             this.Grupo.Enter += new System.EventHandler(this.Grupo_Enter);
@@ -61,7 +61,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(6, 42);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(725, 25);
+            this.label3.Size = new System.Drawing.Size(826, 25);
             this.label3.TabIndex = 59;
             this.label3.Text = "Listado de Artículos";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -72,6 +72,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(175, 20);
             this.textBox1.TabIndex = 4;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -105,7 +106,7 @@
             this.Grilla.Location = new System.Drawing.Point(6, 70);
             this.Grilla.Name = "Grilla";
             this.Grilla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Grilla.Size = new System.Drawing.Size(725, 360);
+            this.Grilla.Size = new System.Drawing.Size(826, 360);
             this.Grilla.TabIndex = 0;
             this.Grilla.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grilla_CellContentClick);
             // 
@@ -113,7 +114,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(761, 488);
+            this.ClientSize = new System.Drawing.Size(899, 488);
             this.Controls.Add(this.Grupo);
             this.Name = "FrmListadoArticulo";
             this.Text = "Listado de artículos";

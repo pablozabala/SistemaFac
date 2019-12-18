@@ -45,7 +45,7 @@ namespace SistemaFact
         }
 
         /*
-         * alter table articulo add Stock int
+         * alter table articulo add  Fecha date
          * create table Impresora
 ( 
    Fila int,

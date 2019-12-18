@@ -51,5 +51,14 @@ namespace SistemaFact
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string Codigo = textBox1.Text;
+            if (Codigo.Length >4)
+            {
+                CargarGrilla("", Codigo);
+            } 
+        }
     }
 }

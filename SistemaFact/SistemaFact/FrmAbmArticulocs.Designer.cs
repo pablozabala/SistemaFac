@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAbmArticulocs));
             this.Grupo = new System.Windows.Forms.GroupBox();
+            this.txtM_Fecha = new System.Windows.Forms.MaskedTextBox();
             this.btnAgregarColor = new System.Windows.Forms.Button();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.ImagenCodigo = new System.Windows.Forms.PictureBox();
@@ -71,6 +72,7 @@
             // 
             // Grupo
             // 
+            this.Grupo.Controls.Add(this.txtM_Fecha);
             this.Grupo.Controls.Add(this.btnAgregarColor);
             this.Grupo.Controls.Add(this.txtCodigo);
             this.Grupo.Controls.Add(this.ImagenCodigo);
@@ -103,6 +105,15 @@
             this.Grupo.TabStop = false;
             this.Grupo.Text = "Información del artículo";
             // 
+            // txtM_Fecha
+            // 
+            this.txtM_Fecha.Location = new System.Drawing.Point(158, 199);
+            this.txtM_Fecha.Mask = "00/00/0000";
+            this.txtM_Fecha.Name = "txtM_Fecha";
+            this.txtM_Fecha.Size = new System.Drawing.Size(83, 23);
+            this.txtM_Fecha.TabIndex = 42;
+            this.txtM_Fecha.ValidatingType = typeof(System.DateTime);
+            // 
             // btnAgregarColor
             // 
             this.btnAgregarColor.Image = global::SistemaFact.Properties.Resources.add;
@@ -123,7 +134,7 @@
             // 
             // ImagenCodigo
             // 
-            this.ImagenCodigo.Location = new System.Drawing.Point(158, 199);
+            this.ImagenCodigo.Location = new System.Drawing.Point(156, 226);
             this.ImagenCodigo.Name = "ImagenCodigo";
             this.ImagenCodigo.Size = new System.Drawing.Size(240, 50);
             this.ImagenCodigo.TabIndex = 22;
@@ -132,7 +143,7 @@
             // btnGenerarCodigoBarra
             // 
             this.btnGenerarCodigoBarra.Image = global::SistemaFact.Properties.Resources.CodigoBarra;
-            this.btnGenerarCodigoBarra.Location = new System.Drawing.Point(402, 199);
+            this.btnGenerarCodigoBarra.Location = new System.Drawing.Point(402, 223);
             this.btnGenerarCodigoBarra.Name = "btnGenerarCodigoBarra";
             this.btnGenerarCodigoBarra.Size = new System.Drawing.Size(26, 26);
             this.btnGenerarCodigoBarra.TabIndex = 21;
@@ -170,7 +181,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(42, 199);
+            this.label8.Location = new System.Drawing.Point(42, 217);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(91, 17);
             this.label8.TabIndex = 16;
@@ -178,15 +189,14 @@
             // 
             // txt_CodigoBarra
             // 
-            this.txt_CodigoBarra.Location = new System.Drawing.Point(434, 199);
+            this.txt_CodigoBarra.Location = new System.Drawing.Point(434, 226);
             this.txt_CodigoBarra.Name = "txt_CodigoBarra";
             this.txt_CodigoBarra.Size = new System.Drawing.Size(132, 23);
             this.txt_CodigoBarra.TabIndex = 15;
-            this.txt_CodigoBarra.Visible = false;
             // 
             // btnAbrirImagen
             // 
-            this.btnAbrirImagen.Location = new System.Drawing.Point(296, 245);
+            this.btnAbrirImagen.Location = new System.Drawing.Point(296, 282);
             this.btnAbrirImagen.Name = "btnAbrirImagen";
             this.btnAbrirImagen.Size = new System.Drawing.Size(102, 34);
             this.btnAbrirImagen.TabIndex = 14;
@@ -196,7 +206,7 @@
             // 
             // Imagen
             // 
-            this.Imagen.Location = new System.Drawing.Point(158, 255);
+            this.Imagen.Location = new System.Drawing.Point(158, 282);
             this.Imagen.Name = "Imagen";
             this.Imagen.Size = new System.Drawing.Size(132, 135);
             this.Imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -206,7 +216,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(42, 245);
+            this.label7.Location = new System.Drawing.Point(42, 272);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(54, 17);
             this.label7.TabIndex = 12;
@@ -473,5 +483,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Button btnAgregarColor;
+        private System.Windows.Forms.MaskedTextBox txtM_Fecha;
     }
 }

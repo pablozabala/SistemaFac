@@ -27,6 +27,7 @@ namespace SistemaFact
             fun.LlenarCombo(cmb_CodTipoPrenda, "TipoPrenda", "Nombre", "CodTipoPrenda");
             fun.LlenarCombo(cmb_CodOrigen, "Origen", "Nombre", "CodOrigen");
             fun.LlenarCombo(cmb_CodColor, "Color", "Nombre", "CodColor");
+            txtM_Fecha.Text = DateTime.Now.ToShortDateString();
         }
 
         private void Botonera(int Jugada)
@@ -67,6 +68,7 @@ namespace SistemaFact
             Grupo.Enabled = true;
             Clases.cFunciones fun = new Clases.cFunciones();
             fun.LimpiarGenerico(this);
+            txtM_Fecha.Text = DateTime.Now.ToShortDateString();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -83,6 +85,16 @@ namespace SistemaFact
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             Clases.cFunciones fun = new Clases.cFunciones();
+            if (fun.ValidarFecha (txtM_Fecha.Text)==false)
+            {
+                Mensaje("La fecha no es válida");
+                return;
+            }
+            if (txt_Nombre.Text =="")
+            {
+                Mensaje("Debe ingresar una descripción para continuar");
+                return;
+            }
             if (txtCodigo.Text == "")
                 fun.GuardarNuevoGenerico(this, "Articulo");
             else
