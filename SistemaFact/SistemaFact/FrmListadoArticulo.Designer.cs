@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.Grupo = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
@@ -40,6 +41,7 @@
             // 
             // Grupo
             // 
+            this.Grupo.Controls.Add(this.label3);
             this.Grupo.Controls.Add(this.textBox1);
             this.Grupo.Controls.Add(this.label2);
             this.Grupo.Controls.Add(this.txtDescripcion);
@@ -50,8 +52,19 @@
             this.Grupo.Size = new System.Drawing.Size(737, 464);
             this.Grupo.TabIndex = 20;
             this.Grupo.TabStop = false;
-            this.Grupo.Text = "Tipos de prenda";
             this.Grupo.Enter += new System.EventHandler(this.Grupo_Enter);
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Purple;
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(6, 42);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(725, 25);
+            this.label3.TabIndex = 59;
+            this.label3.Text = "Listado de Artículos";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // textBox1
             // 
@@ -89,10 +102,10 @@
             // Grilla
             // 
             this.Grilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Grilla.Location = new System.Drawing.Point(13, 45);
+            this.Grilla.Location = new System.Drawing.Point(6, 70);
             this.Grilla.Name = "Grilla";
             this.Grilla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Grilla.Size = new System.Drawing.Size(718, 413);
+            this.Grilla.Size = new System.Drawing.Size(725, 360);
             this.Grilla.TabIndex = 0;
             this.Grilla.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grilla_CellContentClick);
             // 
@@ -120,5 +133,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.Label label3;
     }
 }

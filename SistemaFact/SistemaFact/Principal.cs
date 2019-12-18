@@ -70,8 +70,7 @@ namespace SistemaFact
             FrmConfigurarImpresora childForm = new FrmConfigurarImpresora();
             childForm.MdiParent = this;
             //childForm.Text = "Window " + childFormNumber++;
-            chil7798113151308
-                dForm.Show();
+            childForm.Show();
         }
 
         private void CutToolStripMenuItem_Click(object sender, EventArgs e)
