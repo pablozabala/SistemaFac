@@ -31,17 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAbmArticulocs));
             this.Grupo = new System.Windows.Forms.GroupBox();
             this.txtM_Fecha = new System.Windows.Forms.MaskedTextBox();
-            this.btnAgregarColor = new System.Windows.Forms.Button();
             this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.ImagenCodigo = new System.Windows.Forms.PictureBox();
-            this.btnGenerarCodigoBarra = new System.Windows.Forms.Button();
-            this.btnAgregarOrigen = new System.Windows.Forms.Button();
-            this.btnNuevaTipoPrenda = new System.Windows.Forms.Button();
             this.txt_Ruta = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_CodigoBarra = new System.Windows.Forms.TextBox();
             this.btnAbrirImagen = new System.Windows.Forms.Button();
-            this.Imagen = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txt_Stock = new System.Windows.Forms.TextBox();
             this.txt_Precio = new System.Windows.Forms.TextBox();
@@ -56,6 +50,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.BarraBotones = new System.Windows.Forms.ToolStrip();
+            this.btnAgregarColor = new System.Windows.Forms.Button();
+            this.ImagenCodigo = new System.Windows.Forms.PictureBox();
+            this.btnGenerarCodigoBarra = new System.Windows.Forms.Button();
+            this.btnAgregarOrigen = new System.Windows.Forms.Button();
+            this.btnNuevaTipoPrenda = new System.Windows.Forms.Button();
+            this.Imagen = new System.Windows.Forms.PictureBox();
             this.btnNuevo = new System.Windows.Forms.ToolStripButton();
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
@@ -65,9 +65,9 @@
             this.btnIGregarColor = new System.Windows.Forms.ToolStripButton();
             this.btnSalir = new System.Windows.Forms.ToolStripButton();
             this.Grupo.SuspendLayout();
+            this.BarraBotones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImagenCodigo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Imagen)).BeginInit();
-            this.BarraBotones.SuspendLayout();
             this.SuspendLayout();
             // 
             // Grupo
@@ -114,16 +114,6 @@
             this.txtM_Fecha.TabIndex = 42;
             this.txtM_Fecha.ValidatingType = typeof(System.DateTime);
             // 
-            // btnAgregarColor
-            // 
-            this.btnAgregarColor.Image = global::SistemaFact.Properties.Resources.add;
-            this.btnAgregarColor.Location = new System.Drawing.Point(512, 52);
-            this.btnAgregarColor.Name = "btnAgregarColor";
-            this.btnAgregarColor.Size = new System.Drawing.Size(26, 26);
-            this.btnAgregarColor.TabIndex = 24;
-            this.btnAgregarColor.UseVisualStyleBackColor = true;
-            this.btnAgregarColor.Click += new System.EventHandler(this.btnAgregarColor_Click);
-            // 
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(465, 141);
@@ -131,44 +121,6 @@
             this.txtCodigo.Size = new System.Drawing.Size(41, 23);
             this.txtCodigo.TabIndex = 23;
             this.txtCodigo.Visible = false;
-            // 
-            // ImagenCodigo
-            // 
-            this.ImagenCodigo.Location = new System.Drawing.Point(156, 226);
-            this.ImagenCodigo.Name = "ImagenCodigo";
-            this.ImagenCodigo.Size = new System.Drawing.Size(240, 50);
-            this.ImagenCodigo.TabIndex = 22;
-            this.ImagenCodigo.TabStop = false;
-            // 
-            // btnGenerarCodigoBarra
-            // 
-            this.btnGenerarCodigoBarra.Image = global::SistemaFact.Properties.Resources.CodigoBarra;
-            this.btnGenerarCodigoBarra.Location = new System.Drawing.Point(402, 223);
-            this.btnGenerarCodigoBarra.Name = "btnGenerarCodigoBarra";
-            this.btnGenerarCodigoBarra.Size = new System.Drawing.Size(26, 26);
-            this.btnGenerarCodigoBarra.TabIndex = 21;
-            this.btnGenerarCodigoBarra.UseVisualStyleBackColor = true;
-            this.btnGenerarCodigoBarra.Click += new System.EventHandler(this.btnGenerarCodigoBarra_Click);
-            // 
-            // btnAgregarOrigen
-            // 
-            this.btnAgregarOrigen.Image = global::SistemaFact.Properties.Resources.add;
-            this.btnAgregarOrigen.Location = new System.Drawing.Point(512, 80);
-            this.btnAgregarOrigen.Name = "btnAgregarOrigen";
-            this.btnAgregarOrigen.Size = new System.Drawing.Size(26, 26);
-            this.btnAgregarOrigen.TabIndex = 20;
-            this.btnAgregarOrigen.UseVisualStyleBackColor = true;
-            this.btnAgregarOrigen.Click += new System.EventHandler(this.btnAgregarOrigen_Click);
-            // 
-            // btnNuevaTipoPrenda
-            // 
-            this.btnNuevaTipoPrenda.Image = global::SistemaFact.Properties.Resources.add;
-            this.btnNuevaTipoPrenda.Location = new System.Drawing.Point(512, 20);
-            this.btnNuevaTipoPrenda.Name = "btnNuevaTipoPrenda";
-            this.btnNuevaTipoPrenda.Size = new System.Drawing.Size(26, 26);
-            this.btnNuevaTipoPrenda.TabIndex = 19;
-            this.btnNuevaTipoPrenda.UseVisualStyleBackColor = true;
-            this.btnNuevaTipoPrenda.Click += new System.EventHandler(this.btnNuevaTipoPrenda_Click);
             // 
             // txt_Ruta
             // 
@@ -203,15 +155,6 @@
             this.btnAbrirImagen.Text = "Seleccionar";
             this.btnAbrirImagen.UseVisualStyleBackColor = true;
             this.btnAbrirImagen.Click += new System.EventHandler(this.btnAbrirImagen_Click);
-            // 
-            // Imagen
-            // 
-            this.Imagen.Location = new System.Drawing.Point(158, 282);
-            this.Imagen.Name = "Imagen";
-            this.Imagen.Size = new System.Drawing.Size(132, 135);
-            this.Imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Imagen.TabIndex = 13;
-            this.Imagen.TabStop = false;
             // 
             // label7
             // 
@@ -341,6 +284,64 @@
             this.BarraBotones.Size = new System.Drawing.Size(671, 39);
             this.BarraBotones.TabIndex = 17;
             this.BarraBotones.Text = "toolStrip1";
+            this.BarraBotones.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.BarraBotones_ItemClicked);
+            // 
+            // btnAgregarColor
+            // 
+            this.btnAgregarColor.Image = global::SistemaFact.Properties.Resources.add;
+            this.btnAgregarColor.Location = new System.Drawing.Point(512, 52);
+            this.btnAgregarColor.Name = "btnAgregarColor";
+            this.btnAgregarColor.Size = new System.Drawing.Size(26, 26);
+            this.btnAgregarColor.TabIndex = 24;
+            this.btnAgregarColor.UseVisualStyleBackColor = true;
+            this.btnAgregarColor.Click += new System.EventHandler(this.btnAgregarColor_Click);
+            // 
+            // ImagenCodigo
+            // 
+            this.ImagenCodigo.Location = new System.Drawing.Point(156, 226);
+            this.ImagenCodigo.Name = "ImagenCodigo";
+            this.ImagenCodigo.Size = new System.Drawing.Size(240, 50);
+            this.ImagenCodigo.TabIndex = 22;
+            this.ImagenCodigo.TabStop = false;
+            // 
+            // btnGenerarCodigoBarra
+            // 
+            this.btnGenerarCodigoBarra.Image = global::SistemaFact.Properties.Resources.CodigoBarra;
+            this.btnGenerarCodigoBarra.Location = new System.Drawing.Point(402, 223);
+            this.btnGenerarCodigoBarra.Name = "btnGenerarCodigoBarra";
+            this.btnGenerarCodigoBarra.Size = new System.Drawing.Size(26, 26);
+            this.btnGenerarCodigoBarra.TabIndex = 21;
+            this.btnGenerarCodigoBarra.UseVisualStyleBackColor = true;
+            this.btnGenerarCodigoBarra.Click += new System.EventHandler(this.btnGenerarCodigoBarra_Click);
+            // 
+            // btnAgregarOrigen
+            // 
+            this.btnAgregarOrigen.Image = global::SistemaFact.Properties.Resources.add;
+            this.btnAgregarOrigen.Location = new System.Drawing.Point(512, 80);
+            this.btnAgregarOrigen.Name = "btnAgregarOrigen";
+            this.btnAgregarOrigen.Size = new System.Drawing.Size(26, 26);
+            this.btnAgregarOrigen.TabIndex = 20;
+            this.btnAgregarOrigen.UseVisualStyleBackColor = true;
+            this.btnAgregarOrigen.Click += new System.EventHandler(this.btnAgregarOrigen_Click);
+            // 
+            // btnNuevaTipoPrenda
+            // 
+            this.btnNuevaTipoPrenda.Image = global::SistemaFact.Properties.Resources.add;
+            this.btnNuevaTipoPrenda.Location = new System.Drawing.Point(512, 20);
+            this.btnNuevaTipoPrenda.Name = "btnNuevaTipoPrenda";
+            this.btnNuevaTipoPrenda.Size = new System.Drawing.Size(26, 26);
+            this.btnNuevaTipoPrenda.TabIndex = 19;
+            this.btnNuevaTipoPrenda.UseVisualStyleBackColor = true;
+            this.btnNuevaTipoPrenda.Click += new System.EventHandler(this.btnNuevaTipoPrenda_Click);
+            // 
+            // Imagen
+            // 
+            this.Imagen.Location = new System.Drawing.Point(158, 282);
+            this.Imagen.Name = "Imagen";
+            this.Imagen.Size = new System.Drawing.Size(132, 135);
+            this.Imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Imagen.TabIndex = 13;
+            this.Imagen.TabStop = false;
             // 
             // btnNuevo
             // 
@@ -438,10 +439,10 @@
             this.Load += new System.EventHandler(this.FrmAbmArticulocs_Load);
             this.Grupo.ResumeLayout(false);
             this.Grupo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ImagenCodigo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Imagen)).EndInit();
             this.BarraBotones.ResumeLayout(false);
             this.BarraBotones.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagenCodigo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Imagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

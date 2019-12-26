@@ -10,17 +10,11 @@ using System.Windows.Forms;
 using SistemaFact.Clases;
 namespace SistemaFact
 {
-    public partial class FrmAbmColores : FormBase
+    public partial class FrmColor : FormBase
     {
-        public FrmAbmColores()
+        public FrmColor()
         {
             InitializeComponent();
-        }
-
-        private void FrmAbmColores_Load(object sender, EventArgs e)
-        {
-            Botonera(1);
-            Grupo.Enabled = false;
         }
 
         private void Botonera(int Jugada)
@@ -55,41 +49,39 @@ namespace SistemaFact
 
         }
 
-        private void form_FormClosing(object sender, FormClosingEventArgs e)
+        private void FrmColor_Load(object sender, EventArgs e)
         {
-            if (Principal.CodigoPrincipalAbm != null)
-            {
-                Botonera(3);
-                txtCodigo.Text = Principal.CodigoPrincipalAbm.ToString();
-                cFunciones fun = new Clases.cFunciones();
-                fun.CargarControles(this, "Color", "CodColor", txtCodigo.Text);
-            }
-
+            Botonera(1);
+            Grupo.Enabled = false;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             Botonera(2);
             Grupo.Enabled = true;
+            Clases.cFunciones fun = new Clases.cFunciones();
+            fun.LimpiarGenerico(this);
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (txt_Nombre.Text == "")
+            Clases.cFunciones fun = new Clases.cFunciones();
+            if (txt_Nombre.Text =="")
             {
-                Mensaje("Debe ingresar una descripción");
+                Mensaje("Debe ingresar un color");
                 return;
             }
-            Clases.cFunciones fun = new Clases.cFunciones();
             if (txtCodigo.Text == "")
                 fun.GuardarNuevoGenerico(this, "Color");
             else
+            {
+                // if (txt_Ruta.Text != "")
+                //   txt_Ruta.Text = txt_Ruta.Text.Replace("\\", "\\\\");
                 fun.ModificarGenerico(this, "Color", "CodColor", txtCodigo.Text);
+
+            }
+            fun.LimpiarGenerico(this);
             Mensaje("Datos grabados correctamente");
-            txtCodigo.Text = "";
-            txt_Nombre.Text = "";
-            Botonera(1);
-            Grupo.Enabled = false;
         }
 
         private void btnAbrir_Click(object sender, EventArgs e)
@@ -104,6 +96,19 @@ namespace SistemaFact
             form.ShowDialog();
         }
 
+        private void form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
+            if (Principal.CodigoPrincipalAbm != null)
+            {
+                Botonera(3);
+                txtCodigo.Text = Principal.CodigoPrincipalAbm.ToString();
+                cFunciones fun = new Clases.cFunciones();
+                fun.CargarControles(this, "Color", "CodColor", txtCodigo.Text);               
+            }
+
+        }
+
         private void btnEditar_Click(object sender, EventArgs e)
         {
             Botonera(2);
@@ -112,20 +117,17 @@ namespace SistemaFact
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            cFunciones fun = new Clases.cFunciones();
             txtCodigo.Text = "";
             txt_Nombre.Text = "";
             Botonera(1);
             Grupo.Enabled = false;
+            fun.LimpiarGenerico(this);
         }
 
-        private void btnEditar_Click_1(object sender, EventArgs e)
+        private void btnSalir_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnAceptar_Click_1(object sender, EventArgs e)
-        {
-
+            this.Close();
         }
     }
 }

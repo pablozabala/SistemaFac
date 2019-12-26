@@ -286,5 +286,10 @@ namespace SistemaFact
             form.FormClosing += new FormClosingEventHandler(form_FormClosing);
             form.ShowDialog();
         }
+
+        private void BarraBotones_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

@@ -56,7 +56,7 @@
             // 
             // label3
             // 
-            this.label3.BackColor = System.Drawing.Color.Purple;
+            this.label3.BackColor = System.Drawing.Color.MediumPurple;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(6, 42);
@@ -105,6 +105,10 @@
             this.Grilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Grilla.Location = new System.Drawing.Point(6, 70);
             this.Grilla.Name = "Grilla";
+            this.Grilla.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.Grilla.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.Grilla.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Grilla.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
             this.Grilla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Grilla.Size = new System.Drawing.Size(826, 360);
             this.Grilla.TabIndex = 0;
@@ -114,7 +118,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(899, 488);
+            this.ClientSize = new System.Drawing.Size(859, 488);
             this.Controls.Add(this.Grupo);
             this.Name = "FrmListadoArticulo";
             this.Text = "Listado de artículos";

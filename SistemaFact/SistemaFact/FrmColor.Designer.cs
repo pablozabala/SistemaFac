@@ -1,6 +1,6 @@
 ﻿namespace SistemaFact
 {
-    partial class FrmAbmColores
+    partial class FrmColor
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAbmColores));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmColor));
             this.Grupo = new System.Windows.Forms.GroupBox();
             this.txt_Nombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.BarraBotones = new System.Windows.Forms.ToolStrip();
+            this.btnNuevo = new System.Windows.Forms.ToolStripButton();
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.btnAceptar = new System.Windows.Forms.ToolStripButton();
@@ -50,10 +51,10 @@
             this.Grupo.Controls.Add(this.txt_Nombre);
             this.Grupo.Controls.Add(this.label1);
             this.Grupo.Controls.Add(this.txtCodigo);
-            this.Grupo.Location = new System.Drawing.Point(12, 59);
+            this.Grupo.Location = new System.Drawing.Point(12, 52);
             this.Grupo.Name = "Grupo";
             this.Grupo.Size = new System.Drawing.Size(353, 131);
-            this.Grupo.TabIndex = 20;
+            this.Grupo.TabIndex = 21;
             this.Grupo.TabStop = false;
             this.Grupo.Text = "Tipos de Color";
             // 
@@ -87,6 +88,7 @@
             // 
             this.BarraBotones.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.BarraBotones.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnNuevo,
             this.btnEditar,
             this.btnEliminar,
             this.btnAceptar,
@@ -96,9 +98,20 @@
             this.btnSalir});
             this.BarraBotones.Location = new System.Drawing.Point(0, 0);
             this.BarraBotones.Name = "BarraBotones";
-            this.BarraBotones.Size = new System.Drawing.Size(651, 39);
-            this.BarraBotones.TabIndex = 21;
+            this.BarraBotones.Size = new System.Drawing.Size(371, 39);
+            this.BarraBotones.TabIndex = 18;
             this.BarraBotones.Text = "toolStrip1";
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
+            this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(36, 36);
+            this.btnNuevo.Text = "toolStripButton1";
+            this.btnNuevo.ToolTipText = "Nuevo";
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnEditar
             // 
@@ -109,7 +122,7 @@
             this.btnEditar.Size = new System.Drawing.Size(36, 36);
             this.btnEditar.Text = "toolStripButton2";
             this.btnEditar.ToolTipText = "Modificar";
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnEliminar
             // 
@@ -129,7 +142,7 @@
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(36, 36);
             this.btnAceptar.Text = "Grabar";
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click_1);
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
@@ -139,6 +152,7 @@
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(36, 36);
             this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAbrir
             // 
@@ -148,6 +162,7 @@
             this.btnAbrir.Name = "btnAbrir";
             this.btnAbrir.Size = new System.Drawing.Size(36, 36);
             this.btnAbrir.Text = "Abrir";
+            this.btnAbrir.Click += new System.EventHandler(this.btnAbrir_Click);
             // 
             // btnIGregarColor
             // 
@@ -167,17 +182,18 @@
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(36, 36);
             this.btnSalir.Text = "Salir";
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // FrmAbmColores
+            // FrmColor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(651, 195);
-            this.Controls.Add(this.BarraBotones);
+            this.ClientSize = new System.Drawing.Size(371, 191);
             this.Controls.Add(this.Grupo);
-            this.Name = "FrmAbmColores";
-            this.Text = "FrmAbmColores";
-            this.Load += new System.EventHandler(this.FrmAbmColores_Load);
+            this.Controls.Add(this.BarraBotones);
+            this.Name = "FrmColor";
+            this.Text = "FrmColor";
+            this.Load += new System.EventHandler(this.FrmColor_Load);
             this.Grupo.ResumeLayout(false);
             this.Grupo.PerformLayout();
             this.BarraBotones.ResumeLayout(false);
@@ -188,11 +204,7 @@
         }
 
         #endregion
-        
-        private System.Windows.Forms.GroupBox Grupo;
-        private System.Windows.Forms.TextBox txt_Nombre;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtCodigo;
+
         private System.Windows.Forms.ToolStrip BarraBotones;
         private System.Windows.Forms.ToolStripButton btnNuevo;
         private System.Windows.Forms.ToolStripButton btnEditar;
@@ -202,5 +214,9 @@
         private System.Windows.Forms.ToolStripButton btnAbrir;
         private System.Windows.Forms.ToolStripButton btnIGregarColor;
         private System.Windows.Forms.ToolStripButton btnSalir;
+        private System.Windows.Forms.GroupBox Grupo;
+        private System.Windows.Forms.TextBox txt_Nombre;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtCodigo;
     }
 }

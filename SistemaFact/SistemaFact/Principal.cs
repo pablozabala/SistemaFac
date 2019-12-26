@@ -130,7 +130,7 @@ namespace SistemaFact
 
         private void printSetupToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmAbmColores  childForm = new FrmAbmColores();
+            FrmColor  childForm = new FrmColor();
             childForm.MdiParent = this;
             //childForm.Text = "Window " + childFormNumber++;
             childForm.Show();
