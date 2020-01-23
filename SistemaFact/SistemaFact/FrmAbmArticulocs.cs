@@ -148,7 +148,7 @@ namespace SistemaFact
 
         private void btnAbrir_Click(object sender, EventArgs e)
         {
-            Principal.OpcionesdeBusqueda = "Nombre;ApCodigoBarra";
+            Principal.OpcionesdeBusqueda = "Nombre;CodigoBarra";
             Principal.TablaPrincipal = "Articulo";
             Principal.OpcionesColumnasGrilla = "CodArticulo;Nombre;Precio";
             Principal.ColumnasVisibles = "0;1;1";
